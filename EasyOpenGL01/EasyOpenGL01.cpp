@@ -34,7 +34,9 @@ int main(int argc, const char * argv[]) {
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     
-    window = glfwCreateWindow(960, 640, "Tutorial 01", nullptr, nullptr);
+    glfwWindowHint(GLFW_FLOATING, GL_TRUE);
+    
+    window = glfwCreateWindow(960, 640, "演示 01", nullptr, nullptr);
     if(!window)
     {
         glfwTerminate();

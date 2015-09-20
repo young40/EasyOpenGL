@@ -12,10 +12,20 @@
 		D54EC04F1BA86E3F00B49841 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC04E1BA86E3F00B49841 /* OpenGL.framework */; };
 		D54EC0511BA86E4400B49841 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC0501BA86E4400B49841 /* Cocoa.framework */; };
 		D54EC0531BA86E7400B49841 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC0521BA86E7400B49841 /* libglfw3.a */; };
+		D54EC0681BA871C500B49841 /* EasyOpenGL02.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D54EC0671BA871C500B49841 /* EasyOpenGL02.cpp */; };
 		D5FEEC391BA732F70008231B /* EasyOpenGL01.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5FEEC381BA732F70008231B /* EasyOpenGL01.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		D54EC0631BA871C400B49841 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		D5FEEC341BA732F70008231B /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -34,11 +44,20 @@
 		D54EC0501BA86E4400B49841 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		D54EC0521BA86E7400B49841 /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw3.a; path = libs/libglfw3.a; sourceTree = "<group>"; };
 		D54EC0551BA86EEA00B49841 /* includes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = includes; sourceTree = "<group>"; };
+		D54EC0651BA871C400B49841 /* EasyOpenGL02 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EasyOpenGL02; sourceTree = BUILT_PRODUCTS_DIR; };
+		D54EC0671BA871C500B49841 /* EasyOpenGL02.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EasyOpenGL02.cpp; sourceTree = "<group>"; };
 		D5FEEC361BA732F70008231B /* EasyOpenGL01 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EasyOpenGL01; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5FEEC381BA732F70008231B /* EasyOpenGL01.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EasyOpenGL01.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D54EC0621BA871C400B49841 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D5FEEC331BA732F70008231B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -66,10 +85,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D54EC0661BA871C500B49841 /* EasyOpenGL02 */ = {
+			isa = PBXGroup;
+			children = (
+				D54EC0671BA871C500B49841 /* EasyOpenGL02.cpp */,
+			);
+			path = EasyOpenGL02;
+			sourceTree = "<group>";
+		};
 		D5FEEC1F1BA732A00008231B = {
 			isa = PBXGroup;
 			children = (
 				D54EC0551BA86EEA00B49841 /* includes */,
+				D54EC0661BA871C500B49841 /* EasyOpenGL02 */,
 				D54EC0491BA86DD400B49841 /* Frameworks */,
 				D5FEEC371BA732F70008231B /* EasyOpenGL01 */,
 				D5FEEC291BA732A00008231B /* Products */,
@@ -80,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				D5FEEC361BA732F70008231B /* EasyOpenGL01 */,
+				D54EC0651BA871C400B49841 /* EasyOpenGL02 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +124,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D54EC0641BA871C400B49841 /* EasyOpenGL02 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D54EC0691BA871C500B49841 /* Build configuration list for PBXNativeTarget "EasyOpenGL02" */;
+			buildPhases = (
+				D54EC0611BA871C400B49841 /* Sources */,
+				D54EC0621BA871C400B49841 /* Frameworks */,
+				D54EC0631BA871C400B49841 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EasyOpenGL02;
+			productName = EasyOpenGL02;
+			productReference = D54EC0651BA871C400B49841 /* EasyOpenGL02 */;
+			productType = "com.apple.product-type.tool";
+		};
 		D5FEEC351BA732F70008231B /* EasyOpenGL01 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5FEEC3A1BA732F70008231B /* Build configuration list for PBXNativeTarget "EasyOpenGL01" */;
@@ -121,6 +167,9 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Peter Young";
 				TargetAttributes = {
+					D54EC0641BA871C400B49841 = {
+						CreatedOnToolsVersion = 7.0;
+					};
 					D5FEEC351BA732F70008231B = {
 						CreatedOnToolsVersion = 7.0;
 					};
@@ -139,11 +188,20 @@
 			projectRoot = "";
 			targets = (
 				D5FEEC351BA732F70008231B /* EasyOpenGL01 */,
+				D54EC0641BA871C400B49841 /* EasyOpenGL02 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D54EC0611BA871C400B49841 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D54EC0681BA871C500B49841 /* EasyOpenGL02.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D5FEEC321BA732F70008231B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -155,10 +213,26 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		D54EC06A1BA871C500B49841 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D54EC06B1BA871C500B49841 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		D5FEEC2D1BA732A00008231B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -194,13 +268,14 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/includes";
 			};
 			name = Debug;
 		};
 		D5FEEC2E1BA732A00008231B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -229,6 +304,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/includes";
 			};
 			name = Release;
 		};
@@ -261,6 +337,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D54EC0691BA871C500B49841 /* Build configuration list for PBXNativeTarget "EasyOpenGL02" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D54EC06A1BA871C500B49841 /* Debug */,
+				D54EC06B1BA871C500B49841 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		D5FEEC231BA732A00008231B /* Build configuration list for PBXProject "EasyOpenGL" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
