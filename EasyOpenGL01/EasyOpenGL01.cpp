@@ -21,39 +21,41 @@ extern "C"
 
 int main(int argc, const char * argv[]) {
     GLFWwindow *window;
-    
+
     if(!glfwInit())
     {
         return -1;
     }
-    
+
     glfwSetErrorCallback(glfw_error_callback);
-    
+
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-    
-    window = glfwCreateWindow(960, 640, "Tutorial 01", nullptr, nullptr);
+
+    glfwWindowHint(GLFW_FLOATING, GL_TRUE);
+
+    window = glfwCreateWindow(960, 640, "演示 01", nullptr, nullptr);
     if(!window)
     {
         glfwTerminate();
         return -1;
     }
-    
+
     glfwMakeContextCurrent(window);
-    
+
     cout << glGetString(GL_VENDOR) << endl;
     cout << glGetString(GL_RENDERER) << endl;
     cout << glGetString(GL_VERSION) << endl;
-    
-    
+
+
     while (!glfwWindowShouldClose(window)) {
         //        glfwSwapBuffers(window);
         glfwPollEvents();
     }
-    
+
     glfwTerminate();
-    
+
     return 0;
 }
