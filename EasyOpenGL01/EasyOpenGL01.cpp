@@ -1,5 +1,5 @@
 //
-//  main.cpp
+//  EasyOpenGL01.cpp
 //  EasyOpenGL01
 //
 //  Created by Peter Young on 9/15/15.

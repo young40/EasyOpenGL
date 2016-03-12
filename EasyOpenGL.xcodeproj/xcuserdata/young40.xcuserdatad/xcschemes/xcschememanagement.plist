@@ -14,10 +14,20 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>EasyOpenGL03.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>D54EC0641BA871C400B49841</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D5F568E31BBF62C0000B0836</key>
 		<dict>
 			<key>primary</key>
 			<true/>
