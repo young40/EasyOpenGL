@@ -45,9 +45,9 @@ int main(int argc, const char * argv[]) {
 
     glfwMakeContextCurrent(window);
 
-    cout << glGetString(GL_VENDOR) << endl;
-    cout << glGetString(GL_RENDERER) << endl;
-    cout << glGetString(GL_VERSION) << endl;
+    cout << "GL_VENDOR: \t"   << glGetString(GL_VENDOR)   << endl;
+    cout << "GL_RENDERER: \t" << glGetString(GL_RENDERER) << endl;
+    cout << "GL_VERSION: \t"  << glGetString(GL_VERSION)  << endl;
 
 
     while (!glfwWindowShouldClose(window)) {
