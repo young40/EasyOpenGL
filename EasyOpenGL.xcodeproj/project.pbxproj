@@ -118,6 +118,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D54CFFF51C947BA6008796A3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
 		D54EC0491BA86DD400B49841 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +162,7 @@
 				D5FEEC371BA732F70008231B /* EasyOpenGL01 */,
 				D54EC0661BA871C500B49841 /* EasyOpenGL02 */,
 				D5F568E51BBF62C0000B0836 /* EasyOpenGL03 */,
+				D54CFFF51C947BA6008796A3 /* Common */,
 				D54EC0491BA86DD400B49841 /* Frameworks */,
 				D5FEEC291BA732A00008231B /* Products */,
 			);

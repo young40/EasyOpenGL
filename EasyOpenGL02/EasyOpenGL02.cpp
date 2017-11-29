@@ -9,6 +9,8 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <cmath>
+
 
 #include <OpenGL/gl3.h> //否则会找不到 glGenVertexArrays
 
@@ -135,6 +137,10 @@ int main(int argc, const char * argv[]) {
     cout << glGetString(GL_VENDOR) << endl;
     cout << glGetString(GL_RENDERER) << endl;
     cout << glGetString(GL_VERSION) << endl;
+    
+    GLint a;
+    glGetIntegerv(GL_MAX_VERTEX_ATTRIBS, &a);
+    cout << "ssss" << a << endl;
 
     GLuint vertexShader = loadShaderFromFile("VertexShader02.vs", GL_VERTEX_SHADER);
     GLuint fragmentShader = loadShaderFromFile("FragmentShader02.fs", GL_FRAGMENT_SHADER);
@@ -169,6 +175,12 @@ int main(int argc, const char * argv[]) {
         glClear(GL_COLOR_BUFFER_BIT);
 
         glUseProgram(program);
+        
+        GLfloat timeValue = glfwGetTime();
+        GLfloat greenValue = (std::sin(timeValue)/2) + 0.5;
+        
+        GLint l = glGetUniformLocation(program, "outColor");
+        glUniform4f(l, 0.2, 0.0, greenValue, 1.0);
 
         glBindVertexArray(vao);//TODO
 

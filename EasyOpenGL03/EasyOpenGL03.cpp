@@ -135,7 +135,11 @@ int main(int argc, const char * argv[])
 
   cout << glGetString(GL_VERSION) << endl;
   cout << glGetString(GL_RENDERER) << endl;
-  cout << glGetString(GL_VERSION) << endl;
+    cout << glGetString(GL_VERSION) << endl;
+    
+    GLuint a;
+    glGetIntegerv(GL_MAX_VERTEX_ATTRIBS, &a);
+    cout << "ssss" << a << endl;
 
   GLuint vertexShader = loadShaderFromFile("VertexShader03.vs", GL_VERTEX_SHADER);
   GLuint fragmentShader = loadShaderFromFile("FragmentShader03.fs", GL_FRAGMENT_SHADER);
