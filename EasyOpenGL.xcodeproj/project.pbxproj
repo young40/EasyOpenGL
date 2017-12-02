@@ -15,6 +15,8 @@
 		D52DD7A31BCC067D001C997D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC04E1BA86E3F00B49841 /* OpenGL.framework */; };
 		D52DD7A41BCC068A001C997D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC0501BA86E4400B49841 /* Cocoa.framework */; };
 		D52DD7A51BCC069D001C997D /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC0521BA86E7400B49841 /* libglfw3.a */; };
+		D54C3A4B1FD2EBE90026658F /* FragmentShader03.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = D54C3A491FD2EB890026658F /* FragmentShader03.fs */; };
+		D54C3A4C1FD2EBE90026658F /* VertexShader03.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = D54C3A4A1FD2EB8A0026658F /* VertexShader03.vs */; };
 		D54EC04B1BA86E0E00B49841 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC04A1BA86E0E00B49841 /* CoreVideo.framework */; };
 		D54EC04D1BA86E1900B49841 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC04C1BA86E1900B49841 /* IOKit.framework */; };
 		D54EC04F1BA86E3F00B49841 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC04E1BA86E3F00B49841 /* OpenGL.framework */; };
@@ -46,12 +48,14 @@
 		};
 		D5F568E21BBF62C0000B0836 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
+				D54C3A4B1FD2EBE90026658F /* FragmentShader03.fs in CopyFiles */,
+				D54C3A4C1FD2EBE90026658F /* VertexShader03.vs in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D5FEEC341BA732F70008231B /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -67,6 +71,8 @@
 /* Begin PBXFileReference section */
 		D5078ADE1FD2C7C700732E66 /* EasyOpenGL.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = EasyOpenGL.cpp; path = Common/EasyOpenGL.cpp; sourceTree = "<group>"; };
 		D5078ADF1FD2C7C700732E66 /* EasyOpenGL.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = EasyOpenGL.hpp; path = Common/EasyOpenGL.hpp; sourceTree = "<group>"; };
+		D54C3A491FD2EB890026658F /* FragmentShader03.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = FragmentShader03.fs; sourceTree = "<group>"; };
+		D54C3A4A1FD2EB8A0026658F /* VertexShader03.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = VertexShader03.vs; sourceTree = "<group>"; };
 		D54EC04A1BA86E0E00B49841 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		D54EC04C1BA86E1900B49841 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		D54EC04E1BA86E3F00B49841 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -157,6 +163,8 @@
 		D5F568E51BBF62C0000B0836 /* EasyOpenGL03 */ = {
 			isa = PBXGroup;
 			children = (
+				D54C3A491FD2EB890026658F /* FragmentShader03.fs */,
+				D54C3A4A1FD2EB8A0026658F /* VertexShader03.vs */,
 				D5F568E61BBF62C0000B0836 /* EasyOpenGL03.cpp */,
 			);
 			path = EasyOpenGL03;
