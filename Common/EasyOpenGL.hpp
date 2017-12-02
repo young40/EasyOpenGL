@@ -11,4 +11,16 @@
 
 #include <stdio.h>
 
+#include <string>
+#include <iostream>
+
+#include <GLFW/glfw3.h>
+#include <GLFW/glfw3native.h>
+
+using namespace std;
+
+void glfw_error_callback(int error, const char *desc);
+
+GLFWwindow* EO_CreateWindow(int width, int height, std::string title);
+
 #endif /* EasyOpenGL_hpp */

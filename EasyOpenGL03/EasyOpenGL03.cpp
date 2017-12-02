@@ -11,20 +11,12 @@
 #include <sstream>
 #include <cmath>
 
-
 #include <OpenGL/gl3.h> //否则会找不到 glGenVertexArrays
-
 #include <GLFW/glfw3.h>
 
-using namespace std;
+#include "EasyOpenGL.hpp"
 
-extern "C"
-{
-    static void glfw_error_callback(int error, const char *desc)
-    {
-        fprintf(stderr, "Running got error: %d,\t %s\n", error, desc);
-    }
-}
+using namespace std;
 
 int loadShaderFromFile(string file, GLuint shaderType)
 {
@@ -110,34 +102,8 @@ GLuint createProgram(GLuint vertexShader, GLuint fragmentShader)
 
 
 int main(int argc, const char * argv[]) {
-    GLFWwindow *window;
+    GLFWwindow *window = EO_CreateWindow(960, 640, "轻轻松松OpenGL 03 -- 来个动态三角形");
 
-    if (!glfwInit())
-    {
-        return -1;
-    }
-
-    glfwSetErrorCallback(glfw_error_callback);
-
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
-    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-
-    window = glfwCreateWindow(960, 640, "轻轻松松OpenGL 02", nullptr, nullptr);
-
-    if (!window)
-    {
-        glfwTerminate();
-        return -1;
-    }
-
-    glfwMakeContextCurrent(window);
-
-    cout << glGetString(GL_VENDOR) << endl;
-    cout << glGetString(GL_RENDERER) << endl;
-    cout << glGetString(GL_VERSION) << endl;
-    
     GLint a;
     glGetIntegerv(GL_MAX_VERTEX_ATTRIBS, &a);
     cout << "ssss" << a << endl;
