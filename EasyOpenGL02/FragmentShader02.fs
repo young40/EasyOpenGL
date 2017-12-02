@@ -1,6 +1,6 @@
 #version 410
 
-uniform vec4 outColor;
+in vec4 outColor;
 
 out vec4 color22;
 

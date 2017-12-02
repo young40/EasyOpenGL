@@ -51,7 +51,7 @@ int main(int argc, const char * argv[]) {
 
 
     while (!glfwWindowShouldClose(window)) {
-        //        glfwSwapBuffers(window);
+                glfwSwapBuffers(window);
         glfwPollEvents();
     }
 

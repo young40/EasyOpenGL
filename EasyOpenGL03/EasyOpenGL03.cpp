@@ -58,7 +58,7 @@ int loadShaderFromFile(string file, GLuint shaderType)
   glCompileShader(shader);
 
   GLint status;
-  glGetShaderiv(shader, GL_COMPILE, &status);
+  glGetShaderiv(shader, GL_COMPILE_STATUS, &status);
 
   if (status == GL_FALSE)
     {
@@ -137,7 +137,7 @@ int main(int argc, const char * argv[])
   cout << glGetString(GL_RENDERER) << endl;
     cout << glGetString(GL_VERSION) << endl;
     
-    GLuint a;
+    GLint a;
     glGetIntegerv(GL_MAX_VERTEX_ATTRIBS, &a);
     cout << "ssss" << a << endl;
 
