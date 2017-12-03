@@ -17,14 +17,14 @@
 #include "EasyOpenGL.hpp"
 
 int main(int argc, const char * argv[]) {
-    GLFWwindow *window = EO_CreateWindow(960, 640, "轻轻松松OpenGL 03 -- 来个动态三角形");
+    GLFWwindow *window = EO_CreateWindow(960, 640, "轻轻松松OpenGL 04 -- 来个动态三角形");
 
     GLint a;
     glGetIntegerv(GL_MAX_VERTEX_ATTRIBS, &a);
     cout << "ssss" << a << endl;
 
-    GLuint vertexShader = EO_LoadShaderFromFile("VertexShader03.vs", GL_VERTEX_SHADER);
-    GLuint fragmentShader = EO_LoadShaderFromFile("FragmentShader03.fs", GL_FRAGMENT_SHADER);
+    GLuint vertexShader = EO_LoadShaderFromFile("VertexShader04.vs", GL_VERTEX_SHADER);
+    GLuint fragmentShader = EO_LoadShaderFromFile("FragmentShader04.fs", GL_FRAGMENT_SHADER);
 
     GLuint program = EO_CreateProgram(vertexShader, fragmentShader);
 
