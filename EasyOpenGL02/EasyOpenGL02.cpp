@@ -54,11 +54,6 @@ int main(int argc, const char * argv[]) {
 
         glUseProgram(program);
         
-        GLfloat timeValue = glfwGetTime();
-        GLfloat greenValue = (std::sin(timeValue)/2) + 0.5;
-        
-        glUniform4f(l, 0.2, 0.0, greenValue, 1.0);
-
         glBindVertexArray(vao);//TODO
 
         glDrawArrays(GL_TRIANGLES, 0, 3);
