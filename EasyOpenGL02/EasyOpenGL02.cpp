@@ -34,9 +34,9 @@ int main(int argc, const char * argv[]) {
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
 
     GLfloat vertexData[] = {
-        0.0f,  0.7f,  0.0f,
+         0.0f,  0.7f, 0.0f,
         -0.7f, -0.7f, 0.0f,
-        0.7f,  -0.7f, 0.0f
+         0.7f, -0.7f, 0.0f
     };
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertexData), vertexData, GL_STATIC_DRAW);
 
