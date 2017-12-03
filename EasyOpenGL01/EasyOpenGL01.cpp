@@ -15,14 +15,14 @@ using namespace std;
 
 int main(int argc, const char * argv[]) {
     GLFWwindow *window = EO_CreateWindow(960, 640, "轻轻松松OpenGL 01");
-    
+
     if (!window)
     {
         return 1;
     }
 
     while (!glfwWindowShouldClose(window)) {
-                glfwSwapBuffers(window);
+        glfwSwapBuffers(window);
         glfwPollEvents();
     }
 
