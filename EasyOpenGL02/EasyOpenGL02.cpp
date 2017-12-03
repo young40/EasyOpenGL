@@ -20,7 +20,7 @@ int main(int argc, const char * argv[]) {
     glGetIntegerv(GL_MAX_VERTEX_ATTRIBS, &a);
     cout << "ssss" << a << endl;
 
-    GLuint vertexShader = EO_LoadShaderFromFile("VertexShader02.vs", GL_VERTEX_SHADER);
+    GLuint vertexShader   = EO_LoadShaderFromFile("VertexShader02.vs",   GL_VERTEX_SHADER);
     GLuint fragmentShader = EO_LoadShaderFromFile("FragmentShader02.fs", GL_FRAGMENT_SHADER);
 
     GLuint program = EO_CreateProgram(vertexShader, fragmentShader);
@@ -53,7 +53,7 @@ int main(int argc, const char * argv[]) {
         glClear(GL_COLOR_BUFFER_BIT);
 
         glUseProgram(program);
-        
+
         glBindVertexArray(vao);//TODO
 
         glDrawArrays(GL_TRIANGLES, 0, 3);
