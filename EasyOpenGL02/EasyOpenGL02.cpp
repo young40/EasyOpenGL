@@ -46,7 +46,6 @@ int main(int argc, const char * argv[]) {
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
 
-
     while (!glfwWindowShouldClose(window))
     {
         glClearColor(0, 0, 0, 1);
