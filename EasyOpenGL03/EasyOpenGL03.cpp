@@ -16,91 +16,6 @@
 
 #include "EasyOpenGL.hpp"
 
-using namespace std;
-
-int loadShaderFromFile(string file, GLuint shaderType)
-{
-    ifstream f;
-    f.open(file);
-
-    if (!f.is_open()) {
-        cout << "打开文件失败:" << file << endl;
-        return 0;
-    }
-
-    stringstream ss;
-    ss << f.rdbuf();
-
-    f.close();
-
-    string shaderStr = ss.str();
-
-    cout << "Got Shader:\n" << shaderStr << "\n" << endl;
-
-    GLuint shader = glCreateShader(shaderType);
-
-    if (shader == 0)
-    {
-        cout << "glCreateShader: create Shader failed" << endl;
-
-        return 0;
-    }
-
-    const char* code = shaderStr.c_str();
-    glShaderSource(shader, 1, (const GLchar**)&code, nullptr);
-
-    glCompileShader(shader);
-
-    GLint status;
-    glGetShaderiv(shader, GL_COMPILE_STATUS, &status);
-
-    if (status == GL_FALSE)
-    {
-        cout << "Shader compile failed:\n" << endl;
-
-        GLint infoLogLength;
-        glGetShaderiv(shader, GL_INFO_LOG_LENGTH, &infoLogLength);
-        char* strInfoLog = new char[infoLogLength + 1];
-        glGetShaderInfoLog(shader, infoLogLength, nullptr, strInfoLog);
-
-        glDeleteShader(shader);
-        shader = 0;
-
-        return 0;
-    }
-
-    return shader;
-}
-
-GLuint createProgram(GLuint vertexShader, GLuint fragmentShader)
-{
-    GLuint program = glCreateProgram();
-    if (program == 0) {
-        cout << "glCreateProgram: create program failed" << endl;
-        return 0;
-    }
-
-    glAttachShader(program, vertexShader);
-    glAttachShader(program, fragmentShader);
-
-    glLinkProgram(program);
-
-    glDetachShader(program, vertexShader);
-    glDetachShader(program, fragmentShader);
-
-    GLint status;
-    glGetProgramiv(program, GL_LINK_STATUS, &status);
-
-    if (status == GL_FALSE)
-    {
-        //TODO: 添加失败原因处理
-        return 0;
-    }
-
-    return program;
-}
-
-
 int main(int argc, const char * argv[]) {
     GLFWwindow *window = EO_CreateWindow(960, 640, "轻轻松松OpenGL 03 -- 来个动态三角形");
 
@@ -108,10 +23,10 @@ int main(int argc, const char * argv[]) {
     glGetIntegerv(GL_MAX_VERTEX_ATTRIBS, &a);
     cout << "ssss" << a << endl;
 
-    GLuint vertexShader = loadShaderFromFile("VertexShader03.vs", GL_VERTEX_SHADER);
-    GLuint fragmentShader = loadShaderFromFile("FragmentShader03.fs", GL_FRAGMENT_SHADER);
+    GLuint vertexShader = EO_LoadShaderFromFile("VertexShader03.vs", GL_VERTEX_SHADER);
+    GLuint fragmentShader = EO_LoadShaderFromFile("FragmentShader03.fs", GL_FRAGMENT_SHADER);
 
-    GLuint program = createProgram(vertexShader, fragmentShader);
+    GLuint program = EO_CreateProgram(vertexShader, fragmentShader);
 
     GLuint vao;
     glGenVertexArrays(1, &vao);

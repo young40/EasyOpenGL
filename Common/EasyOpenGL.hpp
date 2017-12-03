@@ -22,5 +22,7 @@ using namespace std;
 void glfw_error_callback(int error, const char *desc);
 
 GLFWwindow* EO_CreateWindow(int width, int height, std::string title);
+GLuint EO_CreateProgram(GLuint vertexShader, GLuint fragmentShader);
+GLuint EO_LoadShaderFromFile(string file, GLuint shaderType);
 
 #endif /* EasyOpenGL_hpp */
