@@ -17,12 +17,50 @@ int main(int argc, const char * argv[]) {
     {
         return 1;
     }
-    
+
+    GLuint vertexShader   = EO_LoadShaderFromFile("VertexShader03.vs",   GL_VERTEX_SHADER);
+    GLuint fragmentShader = EO_LoadShaderFromFile("FragmentShader03.fs", GL_FRAGMENT_SHADER);
+
+    GLuint program = EO_CreateProgram(vertexShader, fragmentShader);
+
+    GLuint vao, vbo;
+
+    glGenVertexArrays(1, &vao);
+    glBindVertexArray(vao);
+
+    glGenBuffers(1, &vbo);
+    glBindBuffer(GL_ARRAY_BUFFER, vbo);
+
+    GLfloat vertexData[] = {
+       0.0f,  0.7f, 0.0f, 1.0f, 0.0f, 0.0f,
+      -0.7f, -0.7f, 0.0f, 0.0f, 1.0f, 0.0f,
+       0.7f, -0.7f, 0.0f, 0.0f, 0.0f, 1.0f
+    };
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertexData), vertexData, GL_STATIC_DRAW);
+
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6*sizeof(GLfloat), (void*)0);
+    glEnableVertexAttribArray(0);
+
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6*sizeof(GLfloat), (void*)(3*sizeof(GLfloat)));
+    glEnableVertexAttribArray(1);
+
     while (!glfwWindowShouldClose(window)) {
+        glClearColor(0, 0, 0, 1);
+        glClear(GL_COLOR_BUFFER_BIT);
+
+        glUseProgram(program);
+        glBindVertexArray(vao);
+
+        glDrawArrays(GL_TRIANGLES, 0, 3);
+
+        glBindVertexArray(0);
+        glUseProgram(0);
+
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
-    
+
+
     glfwTerminate();
 
     return 0;

@@ -38,6 +38,8 @@
 		D57B0E7F1BBC3420009EA2A3 /* VertexShader02.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = D57B0E7A1BBBE7BE009EA2A3 /* VertexShader02.vs */; };
 		D57B0E801BBC3420009EA2A3 /* FragmentShader02.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = D57B0E7B1BBBE8BF009EA2A3 /* FragmentShader02.fs */; };
 		D58167DE1FD4444100439620 /* EasyOpenGL03.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D58167DD1FD4444100439620 /* EasyOpenGL03.cpp */; };
+		D5A70F681FE4AA45001C0E2F /* FragmentShader03.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = D5A70F661FE4AA2F001C0E2F /* FragmentShader03.fs */; };
+		D5A70F691FE4AA45001C0E2F /* VertexShader03.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = D5A70F671FE4AA2F001C0E2F /* VertexShader03.vs */; };
 		D5AD17C21FD41971009EEA08 /* EasyOpenGL_Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5AD17C11FD41970009EEA08 /* EasyOpenGL_Shader.cpp */; };
 		D5AD17C31FD41971009EEA08 /* EasyOpenGL_Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5AD17C11FD41970009EEA08 /* EasyOpenGL_Shader.cpp */; };
 		D5AD17C41FD41971009EEA08 /* EasyOpenGL_Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5AD17C11FD41970009EEA08 /* EasyOpenGL_Shader.cpp */; };
@@ -59,12 +61,14 @@
 		};
 		D58167D91FD4444100439620 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
+				D5A70F681FE4AA45001C0E2F /* FragmentShader03.fs in CopyFiles */,
+				D5A70F691FE4AA45001C0E2F /* VertexShader03.vs in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D5F568E21BBF62C0000B0836 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -105,6 +109,8 @@
 		D57B0E7B1BBBE8BF009EA2A3 /* FragmentShader02.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = FragmentShader02.fs; sourceTree = "<group>"; };
 		D58167DB1FD4444100439620 /* EasyOpenGL03 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EasyOpenGL03; sourceTree = BUILT_PRODUCTS_DIR; };
 		D58167DD1FD4444100439620 /* EasyOpenGL03.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EasyOpenGL03.cpp; sourceTree = "<group>"; };
+		D5A70F661FE4AA2F001C0E2F /* FragmentShader03.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = FragmentShader03.fs; sourceTree = "<group>"; };
+		D5A70F671FE4AA2F001C0E2F /* VertexShader03.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = VertexShader03.vs; sourceTree = "<group>"; };
 		D5AD17C11FD41970009EEA08 /* EasyOpenGL_Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EasyOpenGL_Shader.cpp; path = Common/EasyOpenGL_Shader.cpp; sourceTree = "<group>"; };
 		D5F568E41BBF62C0000B0836 /* EasyOpenGL04 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EasyOpenGL04; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F568E61BBF62C0000B0836 /* EasyOpenGL04.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EasyOpenGL04.cpp; sourceTree = "<group>"; };
@@ -200,6 +206,8 @@
 			isa = PBXGroup;
 			children = (
 				D58167DD1FD4444100439620 /* EasyOpenGL03.cpp */,
+				D5A70F671FE4AA2F001C0E2F /* VertexShader03.vs */,
+				D5A70F661FE4AA2F001C0E2F /* FragmentShader03.fs */,
 			);
 			path = EasyOpenGL03;
 			sourceTree = "<group>";
@@ -448,7 +456,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/libs",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.13.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -469,7 +477,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/libs",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.13.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

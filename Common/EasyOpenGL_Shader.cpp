@@ -58,6 +58,8 @@ GLuint EO_LoadShaderFromFile(string file, GLuint shaderType)
         glGetShaderiv(shader, GL_INFO_LOG_LENGTH, &infoLogLength);
         char* strInfoLog = new char[infoLogLength + 1];
         glGetShaderInfoLog(shader, infoLogLength, nullptr, strInfoLog);
+
+        cout << strInfoLog << "\n" << endl;
         
         glDeleteShader(shader);
         shader = 0;
