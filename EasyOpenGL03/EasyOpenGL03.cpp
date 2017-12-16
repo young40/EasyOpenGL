@@ -46,6 +46,8 @@ int main(int argc, const char * argv[]) {
     glEnableVertexAttribArray(aColorLocation);
     glVertexAttribPointer(aColorLocation, 3, GL_FLOAT, GL_FALSE, 6*sizeof(GLfloat), (void*)(3*sizeof(GLfloat)));
 
+//    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+
     while (!glfwWindowShouldClose(window)) {
         glClearColor(0, 0, 0, 1);
         glClear(GL_COLOR_BUFFER_BIT);

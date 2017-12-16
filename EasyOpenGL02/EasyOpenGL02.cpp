@@ -39,6 +39,8 @@ int main(int argc, const char * argv[]) {
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
 
+//    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+
     while (!glfwWindowShouldClose(window))
     {
         glClearColor(0, 0, 0, 1);
