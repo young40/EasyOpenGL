@@ -19,15 +19,15 @@ int main(int argc, const char * argv[]) {
     GLuint program = EO_CreateProgram(vertexShader, fragmentShader);
 
     GLfloat vertexData[] = {
-         0.0f, -0.7f, 0.0f,     //1.0f, 0.0f, 0.0f, //左顶点及颜色(红)
-         0.0f,  0.7f, 0.0f,     //0.0f, 1.0f, 0.0f, //右顶点及颜色(蓝)
-         0.7f,  0.0f, 0.0f,     //0.0f, 0.0f, 1.0f, //上顶点及颜色(绿)
-        -0.7f,  0.0f, 0.0f,     //0.6f, 0.6f, 0.6f, //下顶点及颜色(灰)
+         0.0f, -0.7f, 0.0f,
+         0.0f,  0.7f, 0.0f,
+         0.7f,  0.0f, 0.0f,
+        -0.7f,  0.0f, 0.0f,
     };
 
     GLuint indexData[] = {
-        0, 1, 2,                //1, 3, 5,
-        0, 1, 3,                //3, 5, 7
+        0, 1, 2,
+        0, 1, 3,
     };
 
     GLuint vao, vbo, ebo;
