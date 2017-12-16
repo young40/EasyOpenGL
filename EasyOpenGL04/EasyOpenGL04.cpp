@@ -14,7 +14,7 @@
 int main(int argc, const char * argv[]) {
     GLFWwindow *window = EO_CreateWindow(960, 640, "轻轻松松OpenGL 04 -- 来个动态三角形");
 
-    GLuint vertexShader = EO_LoadShaderFromFile("VertexShader04.vs", GL_VERTEX_SHADER);
+    GLuint vertexShader   = EO_LoadShaderFromFile("VertexShader04.vs",   GL_VERTEX_SHADER);
     GLuint fragmentShader = EO_LoadShaderFromFile("FragmentShader04.fs", GL_FRAGMENT_SHADER);
 
     GLuint program = EO_CreateProgram(vertexShader, fragmentShader);
@@ -28,9 +28,9 @@ int main(int argc, const char * argv[]) {
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
 
     GLfloat vertexData[] = {
-        0.0f,  0.7f,  0.0f,
+         0.0f,  0.7f, 0.0f,
         -0.7f, -0.7f, 0.0f,
-        0.7f,  -0.7f, 0.0f
+         0.7f, -0.7f, 0.0f
     };
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertexData), vertexData, GL_STATIC_DRAW);
 
