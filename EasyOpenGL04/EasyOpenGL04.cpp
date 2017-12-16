@@ -7,21 +7,12 @@
 //
 
 #include <iostream>
-#include <fstream>
-#include <sstream>
 #include <cmath>
-
-#include <OpenGL/gl3.h> //否则会找不到 glGenVertexArrays
-#include <GLFW/glfw3.h>
 
 #include "EasyOpenGL.hpp"
 
 int main(int argc, const char * argv[]) {
     GLFWwindow *window = EO_CreateWindow(960, 640, "轻轻松松OpenGL 04 -- 来个动态三角形");
-
-    GLint a;
-    glGetIntegerv(GL_MAX_VERTEX_ATTRIBS, &a);
-    cout << "ssss" << a << endl;
 
     GLuint vertexShader = EO_LoadShaderFromFile("VertexShader04.vs", GL_VERTEX_SHADER);
     GLuint fragmentShader = EO_LoadShaderFromFile("FragmentShader04.fs", GL_FRAGMENT_SHADER);
@@ -43,12 +34,12 @@ int main(int argc, const char * argv[]) {
     };
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertexData), vertexData, GL_STATIC_DRAW);
 
-    glEnableVertexAttribArray(glGetAttribLocation(program, "vert"));
-    glVertexAttribPointer(glGetAttribLocation(program, "vert"), 3, GL_FLOAT, GL_FALSE, 0, nullptr);
+    GLint aPosPositon = glGetAttribLocation(program, "aPos");
+    glEnableVertexAttribArray(aPosPositon);
+    glVertexAttribPointer(aPosPositon, 3, GL_FLOAT, GL_FALSE, 0, nullptr);
 
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
-
 
     while (!glfwWindowShouldClose(window))
     {
@@ -60,10 +51,10 @@ int main(int argc, const char * argv[]) {
         GLfloat timeValue = glfwGetTime();
         GLfloat greenValue = (std::sin(timeValue)/2) + 0.5;
         
-        GLint l = glGetUniformLocation(program, "outColor");
-        glUniform4f(l, 0.2, 0.0, greenValue, 1.0);
+        GLint uColorLocation = glGetUniformLocation(program, "uColor");
+        glUniform4f(uColorLocation, 0.2, 0.0, greenValue, 1.0);
 
-        glBindVertexArray(vao);//TODO
+        glBindVertexArray(vao);
 
         glDrawArrays(GL_TRIANGLES, 0, 3);
 
