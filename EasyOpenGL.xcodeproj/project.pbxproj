@@ -49,12 +49,17 @@
 		D57B0E801BBC3420009EA2A3 /* FragmentShader02.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = D57B0E7B1BBBE8BF009EA2A3 /* FragmentShader02.fs */; };
 		D57FF8D31FE5F67700DA8F23 /* EasyOpenGL06.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D57FF8D21FE5F67700DA8F23 /* EasyOpenGL06.cpp */; };
 		D57FF8D91FE5F8AA00DA8F23 /* VertexShader06.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = D57FF8D71FE5F6CA00DA8F23 /* VertexShader06.vs */; };
-		D57FF8DA1FE5F8AA00DA8F23 /* FragmentShader.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = D57FF8D81FE5F89300DA8F23 /* FragmentShader.fs */; };
+		D57FF8DA1FE5F8AA00DA8F23 /* FragmentShader06.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = D57FF8D81FE5F89300DA8F23 /* FragmentShader06.fs */; };
 		D57FF8DB1FE5F8B600DA8F23 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC0521BA86E7400B49841 /* libglfw3.a */; };
 		D57FF8DC1FE5F8B600DA8F23 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC0501BA86E4400B49841 /* Cocoa.framework */; };
 		D57FF8DD1FE5F8B600DA8F23 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC04A1BA86E0E00B49841 /* CoreVideo.framework */; };
 		D57FF8DE1FE5F8B600DA8F23 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC04C1BA86E1900B49841 /* IOKit.framework */; };
 		D57FF8DF1FE5F8B600DA8F23 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC04E1BA86E3F00B49841 /* OpenGL.framework */; };
+		D57FF8E21FE5FBA700DA8F23 /* EasyOpenGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5078ADE1FD2C7C700732E66 /* EasyOpenGL.cpp */; };
+		D57FF8E31FE5FBA700DA8F23 /* EasyOpenGL_Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5AD17C11FD41970009EEA08 /* EasyOpenGL_Shader.cpp */; };
+		D57FF8E71FE606E500DA8F23 /* lena_std.tif in CopyFiles */ = {isa = PBXBuildFile; fileRef = D57FF8E61FE6067200DA8F23 /* lena_std.tif */; };
+		D57FF8EA1FE607D400DA8F23 /* lena_std.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = D57FF8E81FE6079100DA8F23 /* lena_std.jpg */; };
+		D57FF8EB1FE607D400DA8F23 /* lena_std.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = D57FF8E91FE6079100DA8F23 /* lena_std.png */; };
 		D58167DE1FD4444100439620 /* EasyOpenGL03.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D58167DD1FD4444100439620 /* EasyOpenGL03.cpp */; };
 		D5A70F681FE4AA45001C0E2F /* FragmentShader03.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = D5A70F661FE4AA2F001C0E2F /* FragmentShader03.fs */; };
 		D5A70F691FE4AA45001C0E2F /* VertexShader03.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = D5A70F671FE4AA2F001C0E2F /* VertexShader03.vs */; };
@@ -94,8 +99,11 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				D57FF8EA1FE607D400DA8F23 /* lena_std.jpg in CopyFiles */,
+				D57FF8EB1FE607D400DA8F23 /* lena_std.png in CopyFiles */,
+				D57FF8E71FE606E500DA8F23 /* lena_std.tif in CopyFiles */,
 				D57FF8D91FE5F8AA00DA8F23 /* VertexShader06.vs in CopyFiles */,
-				D57FF8DA1FE5F8AA00DA8F23 /* FragmentShader.fs in CopyFiles */,
+				D57FF8DA1FE5F8AA00DA8F23 /* FragmentShader06.fs in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,7 +162,11 @@
 		D57FF8D01FE5F67700DA8F23 /* EasyOpenGL06 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EasyOpenGL06; sourceTree = BUILT_PRODUCTS_DIR; };
 		D57FF8D21FE5F67700DA8F23 /* EasyOpenGL06.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EasyOpenGL06.cpp; sourceTree = "<group>"; };
 		D57FF8D71FE5F6CA00DA8F23 /* VertexShader06.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = VertexShader06.vs; sourceTree = "<group>"; };
-		D57FF8D81FE5F89300DA8F23 /* FragmentShader.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = FragmentShader.fs; sourceTree = "<group>"; };
+		D57FF8D81FE5F89300DA8F23 /* FragmentShader06.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = FragmentShader06.fs; sourceTree = "<group>"; };
+		D57FF8E11FE5FB3F00DA8F23 /* stb_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
+		D57FF8E61FE6067200DA8F23 /* lena_std.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = lena_std.tif; sourceTree = "<group>"; };
+		D57FF8E81FE6079100DA8F23 /* lena_std.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lena_std.jpg; sourceTree = "<group>"; };
+		D57FF8E91FE6079100DA8F23 /* lena_std.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lena_std.png; sourceTree = "<group>"; };
 		D58167DB1FD4444100439620 /* EasyOpenGL03 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EasyOpenGL03; sourceTree = BUILT_PRODUCTS_DIR; };
 		D58167DD1FD4444100439620 /* EasyOpenGL03.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EasyOpenGL03.cpp; sourceTree = "<group>"; };
 		D5A70F661FE4AA2F001C0E2F /* FragmentShader03.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = FragmentShader03.fs; sourceTree = "<group>"; };
@@ -289,9 +301,27 @@
 			children = (
 				D57FF8D21FE5F67700DA8F23 /* EasyOpenGL06.cpp */,
 				D57FF8D71FE5F6CA00DA8F23 /* VertexShader06.vs */,
-				D57FF8D81FE5F89300DA8F23 /* FragmentShader.fs */,
+				D57FF8D81FE5F89300DA8F23 /* FragmentShader06.fs */,
 			);
 			path = EasyOpenGL06;
+			sourceTree = "<group>";
+		};
+		D57FF8E01FE5FB3F00DA8F23 /* ThirdPart */ = {
+			isa = PBXGroup;
+			children = (
+				D57FF8E11FE5FB3F00DA8F23 /* stb_image.h */,
+			);
+			path = ThirdPart;
+			sourceTree = "<group>";
+		};
+		D57FF8E51FE6067200DA8F23 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D57FF8E81FE6079100DA8F23 /* lena_std.jpg */,
+				D57FF8E91FE6079100DA8F23 /* lena_std.png */,
+				D57FF8E61FE6067200DA8F23 /* lena_std.tif */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		D58167DC1FD4444100439620 /* EasyOpenGL03 */ = {
@@ -325,6 +355,8 @@
 				D55E4B051FE4D4F7003DCC0C /* EasyOpenGL05 */,
 				D57FF8D11FE5F67700DA8F23 /* EasyOpenGL06 */,
 				D54CFFF51C947BA6008796A3 /* Common */,
+				D57FF8E01FE5FB3F00DA8F23 /* ThirdPart */,
+				D57FF8E51FE6067200DA8F23 /* Images */,
 				D54EC0491BA86DD400B49841 /* Frameworks */,
 				D5FEEC291BA732A00008231B /* Products */,
 			);
@@ -535,6 +567,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D57FF8E31FE5FBA700DA8F23 /* EasyOpenGL_Shader.cpp in Sources */,
+				D57FF8E21FE5FBA700DA8F23 /* EasyOpenGL.cpp in Sources */,
 				D57FF8D31FE5F67700DA8F23 /* EasyOpenGL06.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

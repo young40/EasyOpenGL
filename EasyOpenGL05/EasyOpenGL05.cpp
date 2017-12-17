@@ -11,7 +11,7 @@
 #include "EasyOpenGL.hpp"
 
 int main(int argc, const char * argv[]) {
-    GLFWwindow *window = EO_CreateWindow(960, 640, "轻轻松松OpenGL -- 共用顶点的两个三角形");
+    GLFWwindow *window = EO_CreateWindow(960, 640, "轻轻松松OpenGL 05 -- 共用顶点的两个三角形");
 
     GLuint vertexShader   = EO_LoadShaderFromFile("VertexShader05.vs",   GL_VERTEX_SHADER);
     GLuint fragmentShader = EO_LoadShaderFromFile("FragmentShader05.fs", GL_FRAGMENT_SHADER);
