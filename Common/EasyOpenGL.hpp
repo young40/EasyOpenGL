@@ -27,4 +27,7 @@ GLFWwindow* EO_CreateWindow(int width, int height, std::string title);
 GLuint EO_CreateProgram(GLuint vertexShader, GLuint fragmentShader);
 GLuint EO_LoadShaderFromFile(string file, GLuint shaderType);
 
+GLenum _glCheckError(const char *file, int line);
+#define EO_CheckErro() _glCheckError(__FILE__, __LINE__)
+
 #endif /* EasyOpenGL_hpp */

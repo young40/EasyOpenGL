@@ -60,6 +60,12 @@
 		D57FF8E71FE606E500DA8F23 /* lena_std.tif in CopyFiles */ = {isa = PBXBuildFile; fileRef = D57FF8E61FE6067200DA8F23 /* lena_std.tif */; };
 		D57FF8EA1FE607D400DA8F23 /* lena_std.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = D57FF8E81FE6079100DA8F23 /* lena_std.jpg */; };
 		D57FF8EB1FE607D400DA8F23 /* lena_std.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = D57FF8E91FE6079100DA8F23 /* lena_std.png */; };
+		D57FF8ED1FE60EF100DA8F23 /* EasyOpenGL_Error.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D57FF8EC1FE60EF100DA8F23 /* EasyOpenGL_Error.cpp */; };
+		D57FF8EE1FE60EF100DA8F23 /* EasyOpenGL_Error.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D57FF8EC1FE60EF100DA8F23 /* EasyOpenGL_Error.cpp */; };
+		D57FF8EF1FE60EF100DA8F23 /* EasyOpenGL_Error.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D57FF8EC1FE60EF100DA8F23 /* EasyOpenGL_Error.cpp */; };
+		D57FF8F01FE60EF100DA8F23 /* EasyOpenGL_Error.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D57FF8EC1FE60EF100DA8F23 /* EasyOpenGL_Error.cpp */; };
+		D57FF8F11FE60EF100DA8F23 /* EasyOpenGL_Error.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D57FF8EC1FE60EF100DA8F23 /* EasyOpenGL_Error.cpp */; };
+		D57FF8F21FE60EF100DA8F23 /* EasyOpenGL_Error.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D57FF8EC1FE60EF100DA8F23 /* EasyOpenGL_Error.cpp */; };
 		D58167DE1FD4444100439620 /* EasyOpenGL03.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D58167DD1FD4444100439620 /* EasyOpenGL03.cpp */; };
 		D5A70F681FE4AA45001C0E2F /* FragmentShader03.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = D5A70F661FE4AA2F001C0E2F /* FragmentShader03.fs */; };
 		D5A70F691FE4AA45001C0E2F /* VertexShader03.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = D5A70F671FE4AA2F001C0E2F /* VertexShader03.vs */; };
@@ -167,6 +173,7 @@
 		D57FF8E61FE6067200DA8F23 /* lena_std.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = lena_std.tif; sourceTree = "<group>"; };
 		D57FF8E81FE6079100DA8F23 /* lena_std.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lena_std.jpg; sourceTree = "<group>"; };
 		D57FF8E91FE6079100DA8F23 /* lena_std.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lena_std.png; sourceTree = "<group>"; };
+		D57FF8EC1FE60EF100DA8F23 /* EasyOpenGL_Error.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = EasyOpenGL_Error.cpp; path = Common/EasyOpenGL_Error.cpp; sourceTree = "<group>"; };
 		D58167DB1FD4444100439620 /* EasyOpenGL03 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EasyOpenGL03; sourceTree = BUILT_PRODUCTS_DIR; };
 		D58167DD1FD4444100439620 /* EasyOpenGL03.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EasyOpenGL03.cpp; sourceTree = "<group>"; };
 		D5A70F661FE4AA2F001C0E2F /* FragmentShader03.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = FragmentShader03.fs; sourceTree = "<group>"; };
@@ -260,6 +267,7 @@
 				D5078ADF1FD2C7C700732E66 /* EasyOpenGL.hpp */,
 				D5078ADE1FD2C7C700732E66 /* EasyOpenGL.cpp */,
 				D5AD17C11FD41970009EEA08 /* EasyOpenGL_Shader.cpp */,
+				D57FF8EC1FE60EF100DA8F23 /* EasyOpenGL_Error.cpp */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -548,6 +556,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5AD17C31FD41971009EEA08 /* EasyOpenGL_Shader.cpp in Sources */,
+				D57FF8EE1FE60EF100DA8F23 /* EasyOpenGL_Error.cpp in Sources */,
 				D5078AE11FD2C7C700732E66 /* EasyOpenGL.cpp in Sources */,
 				D54EC0681BA871C500B49841 /* EasyOpenGL02.cpp in Sources */,
 			);
@@ -558,6 +567,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D55E4B111FE4D816003DCC0C /* EasyOpenGL_Shader.cpp in Sources */,
+				D57FF8F11FE60EF100DA8F23 /* EasyOpenGL_Error.cpp in Sources */,
 				D55E4B101FE4D816003DCC0C /* EasyOpenGL.cpp in Sources */,
 				D55E4B071FE4D4F7003DCC0C /* EasyOpenGL05.cpp in Sources */,
 			);
@@ -568,6 +578,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D57FF8E31FE5FBA700DA8F23 /* EasyOpenGL_Shader.cpp in Sources */,
+				D57FF8F21FE60EF100DA8F23 /* EasyOpenGL_Error.cpp in Sources */,
 				D57FF8E21FE5FBA700DA8F23 /* EasyOpenGL.cpp in Sources */,
 				D57FF8D31FE5F67700DA8F23 /* EasyOpenGL06.cpp in Sources */,
 			);
@@ -578,6 +589,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D544551E1FD449A400A60DC6 /* EasyOpenGL_Shader.cpp in Sources */,
+				D57FF8EF1FE60EF100DA8F23 /* EasyOpenGL_Error.cpp in Sources */,
 				D544551D1FD449A400A60DC6 /* EasyOpenGL.cpp in Sources */,
 				D58167DE1FD4444100439620 /* EasyOpenGL03.cpp in Sources */,
 			);
@@ -588,6 +600,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5AD17C41FD41971009EEA08 /* EasyOpenGL_Shader.cpp in Sources */,
+				D57FF8F01FE60EF100DA8F23 /* EasyOpenGL_Error.cpp in Sources */,
 				D5078AE21FD2C7C700732E66 /* EasyOpenGL.cpp in Sources */,
 				D5F568E71BBF62C0000B0836 /* EasyOpenGL04.cpp in Sources */,
 			);
@@ -598,6 +611,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5AD17C21FD41971009EEA08 /* EasyOpenGL_Shader.cpp in Sources */,
+				D57FF8ED1FE60EF100DA8F23 /* EasyOpenGL_Error.cpp in Sources */,
 				D5078AE01FD2C7C700732E66 /* EasyOpenGL.cpp in Sources */,
 				D5FEEC391BA732F70008231B /* EasyOpenGL01.cpp in Sources */,
 			);
