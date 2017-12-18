@@ -7,6 +7,7 @@
 //
 
 #include <iostream>
+#include <stdio.h>
 #include "EasyOpenGL.hpp"
 
 #define STB_IMAGE_IMPLEMENTATION
@@ -14,6 +15,7 @@
 
 int main(int argc, const char * argv[]) {
     GLFWwindow *window = EO_CreateWindow(960, 640, "轻轻松松OpenGL 06 -- 加装纹理");
+    EO_CheckErro();
 
     GLuint vertexShader   = EO_LoadShaderFromFile("VertexShader06.vs",   GL_VERTEX_SHADER);
     GLuint fragmentShader = EO_LoadShaderFromFile("FragmentShader06.fs", GL_FRAGMENT_SHADER);
@@ -34,6 +36,13 @@ int main(int argc, const char * argv[]) {
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertexData), vertexData, GL_STATIC_DRAW);
 
+    glEnableVertexAttribArray(0);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, nullptr);
+    EO_CheckErro();
+
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glBindVertexArray(0);
+
     int width, height, channel;
     unsigned char *data = stbi_load("lena_std.jpg", &width, &height, &channel, 0);
 
@@ -41,8 +50,15 @@ int main(int argc, const char * argv[]) {
         glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
-        glEnableVertexAttribArray(vao);
+        glUseProgram(program);
+
+        glBindVertexArray(vao);
+
         glDrawArrays(GL_TRIANGLES, 0, 3);
+        EO_CheckErro();
+
+        glBindVertexArray(0);
+        glUseProgram(0);
 
         glfwPollEvents();
         glfwSwapBuffers(window);
