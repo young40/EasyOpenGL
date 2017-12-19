@@ -57,6 +57,7 @@ int main(int argc, const char * argv[]) {
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
 
+    stbi_set_flip_vertically_on_load(true);
     int width, height, channel;
     unsigned char *data = stbi_load("lena_std.jpg", &width, &height, &channel, 0);
 
@@ -68,6 +69,8 @@ int main(int argc, const char * argv[]) {
     glGenerateMipmap(GL_TEXTURE_2D);
 
     stbi_image_free(data);
+
+//    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
     while (!glfwWindowShouldClose(window)) {
         glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
