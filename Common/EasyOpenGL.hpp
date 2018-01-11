@@ -19,7 +19,12 @@
 #include "GLFW/glfw3.h"
 #include "GLFW/glfw3native.h"
 
+#include "glm/glm/glm.hpp"
+#include "glm/glm/gtc/matrix_transform.hpp"
+#include "glm/glm/gtc/type_ptr.hpp"
+
 using namespace std;
+using namespace glm;
 
 void glfw_error_callback(int error, const char *desc);
 
