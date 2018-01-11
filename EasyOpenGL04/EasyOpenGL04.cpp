@@ -1,6 +1,6 @@
 //
-//  EasyOpenGL02.cpp
-//  EasyOpenGL02
+//  EasyOpenGL04.cpp
+//  EasyOpenGL
 //
 //  Created by Peter Young on 9/15/15.
 //  Copyright © 2015 Peter Young. All rights reserved.

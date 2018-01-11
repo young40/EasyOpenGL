@@ -1,6 +1,6 @@
 //
-//  main.cpp
-//  EasyOpenGL05
+//  EasyOpenGL05.cpp
+//  EasyOpenGL
 //
 //  Created by Peter Young on 16/12/2017.
 //  Copyright © 2017 Peter Young. All rights reserved.
