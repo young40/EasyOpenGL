@@ -35,4 +35,12 @@ GLuint EO_LoadShaderFromFile(string file, GLuint shaderType);
 GLenum _glCheckError(const char *file, int line);
 #define EO_CheckErro() _glCheckError(__FILE__, __LINE__)
 
+void dump(vec2 &v2, int len = 0);
+void dump(vec3 &v3, int len = 0);
+void dump(vec4 &v4, int len = 0);
+
+void dump(mat2 &m2, int len = 0);
+void dump(mat3 &m3, int len = 0);
+void dump(mat4 &m4, int len = 0);
+
 #endif /* EasyOpenGL_hpp */
