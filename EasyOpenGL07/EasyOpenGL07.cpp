@@ -7,7 +7,6 @@
 //
 
 #include <iostream>
-#include <cstdlib>
 
 #include "EasyOpenGL.hpp"
 
@@ -58,7 +57,10 @@ int main(int argc, const char * argv[]) {
 
         glUseProgram(programID);
 
-        glBindVertexArray(vaoIDs[rand()%2]);
+        glBindVertexArray(vaoIDs[0]);
+        glDrawArrays(GL_TRIANGLES, 0, 3);
+
+        glBindVertexArray(vaoIDs[1]);
         glDrawArrays(GL_TRIANGLES, 0, 3);
 
         glfwPollEvents();
