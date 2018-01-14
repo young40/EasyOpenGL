@@ -100,8 +100,8 @@
 		D5B231E1200B62A3008333EE /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC04A1BA86E0E00B49841 /* CoreVideo.framework */; };
 		D5B231E2200B62A3008333EE /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC04C1BA86E1900B49841 /* IOKit.framework */; };
 		D5B231E3200B62A3008333EE /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC04E1BA86E3F00B49841 /* OpenGL.framework */; };
-		D5B231E6200B7B4A008333EE /* FragmentShader.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = D5B231E5200B7B3A008333EE /* FragmentShader.fs */; };
-		D5B231E7200B7B4A008333EE /* VertexShader.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = D5B231E4200B7B2B008333EE /* VertexShader.vs */; };
+		D5B231E6200B7B4A008333EE /* FragmentShader08.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = D5B231E5200B7B3A008333EE /* FragmentShader08.fs */; };
+		D5B231E7200B7B4A008333EE /* VertexShader08.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = D5B231E4200B7B2B008333EE /* VertexShader08.vs */; };
 		D5F568E71BBF62C0000B0836 /* EasyOpenGL04.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5F568E61BBF62C0000B0836 /* EasyOpenGL04.cpp */; };
 		D5FEEC391BA732F70008231B /* EasyOpenGL01.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5FEEC381BA732F70008231B /* EasyOpenGL01.cpp */; };
 /* End PBXBuildFile section */
@@ -172,8 +172,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				D5B231E6200B7B4A008333EE /* FragmentShader.fs in CopyFiles */,
-				D5B231E7200B7B4A008333EE /* VertexShader.vs in CopyFiles */,
+				D5B231E6200B7B4A008333EE /* FragmentShader08.fs in CopyFiles */,
+				D5B231E7200B7B4A008333EE /* VertexShader08.vs in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,8 +239,8 @@
 		D5B231CC200AE506008333EE /* FragmentShader07.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = FragmentShader07.fs; sourceTree = "<group>"; };
 		D5B231D3200B615C008333EE /* EasyOpenGL08 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EasyOpenGL08; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B231D5200B615C008333EE /* EasyOpenGL08.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EasyOpenGL08.cpp; sourceTree = "<group>"; };
-		D5B231E4200B7B2B008333EE /* VertexShader.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = VertexShader.vs; sourceTree = "<group>"; };
-		D5B231E5200B7B3A008333EE /* FragmentShader.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = FragmentShader.fs; sourceTree = "<group>"; };
+		D5B231E4200B7B2B008333EE /* VertexShader08.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = VertexShader08.vs; sourceTree = "<group>"; };
+		D5B231E5200B7B3A008333EE /* FragmentShader08.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = FragmentShader08.fs; sourceTree = "<group>"; };
 		D5F568E41BBF62C0000B0836 /* EasyOpenGL04 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EasyOpenGL04; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F568E61BBF62C0000B0836 /* EasyOpenGL04.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EasyOpenGL04.cpp; sourceTree = "<group>"; };
 		D5FEEC361BA732F70008231B /* EasyOpenGL01 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EasyOpenGL01; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -443,8 +443,8 @@
 			isa = PBXGroup;
 			children = (
 				D5B231D5200B615C008333EE /* EasyOpenGL08.cpp */,
-				D5B231E4200B7B2B008333EE /* VertexShader.vs */,
-				D5B231E5200B7B3A008333EE /* FragmentShader.fs */,
+				D5B231E4200B7B2B008333EE /* VertexShader08.vs */,
+				D5B231E5200B7B3A008333EE /* FragmentShader08.fs */,
 			);
 			path = EasyOpenGL08;
 			sourceTree = "<group>";

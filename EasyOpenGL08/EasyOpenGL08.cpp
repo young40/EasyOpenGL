@@ -16,8 +16,8 @@
 int main(int argc, const char * argv[]) {
     GLFWwindow *window = EO_CreateWindow(960, 640, "EasyOpenGL 08 -- 来点运算");
 
-    GLuint vertexShaderID = EO_LoadShaderFromFile("VertexShader.vs", GL_VERTEX_SHADER);
-    GLuint fragmentShaderID = EO_LoadShaderFromFile("fragmentShader.fs", GL_FRAGMENT_SHADER);
+    GLuint vertexShaderID = EO_LoadShaderFromFile("VertexShader08.vs", GL_VERTEX_SHADER);
+    GLuint fragmentShaderID = EO_LoadShaderFromFile("fragmentShader08.fs", GL_FRAGMENT_SHADER);
     GLuint programID = EO_CreateProgram(vertexShaderID, fragmentShaderID);
 
     GLfloat vertexData[] = {
@@ -68,11 +68,21 @@ int main(int argc, const char * argv[]) {
 
     stbi_image_free(data);
 
+    mat4 trans;
+    trans = glm::translate(trans, vec3(0.3, 0.3, 0.0f));
+
+    trans = scale(trans, vec3(0.5, 0.5, 0.5));
+
     while (!glfwWindowShouldClose(window)) {
         glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
         glUseProgram(programID);
+
+        trans = rotate(trans, sin((float)glfwGetTime()), vec3(0.0, 0.0f, 1.0f));
+
+        GLuint transPos = glGetUniformLocation(programID, "transform");
+        glUniformMatrix4fv(transPos, 1, GL_FALSE, value_ptr(trans));
 
 //        glBindVertexArray(vao);
 //        glDrawArrays(GL_TRIANGLES, 0, 3);
