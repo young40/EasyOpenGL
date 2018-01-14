@@ -81,6 +81,15 @@
 		D5AD17C21FD41971009EEA08 /* EasyOpenGL_Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5AD17C11FD41970009EEA08 /* EasyOpenGL_Shader.cpp */; };
 		D5AD17C31FD41971009EEA08 /* EasyOpenGL_Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5AD17C11FD41970009EEA08 /* EasyOpenGL_Shader.cpp */; };
 		D5AD17C41FD41971009EEA08 /* EasyOpenGL_Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5AD17C11FD41970009EEA08 /* EasyOpenGL_Shader.cpp */; };
+		D5B231C42009030D008333EE /* EasyOpenGL_Math.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5B231C32009030D008333EE /* EasyOpenGL_Math.cpp */; };
+		D5B231C52009030D008333EE /* EasyOpenGL_Math.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5B231C32009030D008333EE /* EasyOpenGL_Math.cpp */; };
+		D5B231C62009030D008333EE /* EasyOpenGL_Math.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5B231C32009030D008333EE /* EasyOpenGL_Math.cpp */; };
+		D5B231C72009030D008333EE /* EasyOpenGL_Math.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5B231C32009030D008333EE /* EasyOpenGL_Math.cpp */; };
+		D5B231C82009030D008333EE /* EasyOpenGL_Math.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5B231C32009030D008333EE /* EasyOpenGL_Math.cpp */; };
+		D5B231C92009030D008333EE /* EasyOpenGL_Math.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5B231C32009030D008333EE /* EasyOpenGL_Math.cpp */; };
+		D5B231CA2009030D008333EE /* EasyOpenGL_Math.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5B231C32009030D008333EE /* EasyOpenGL_Math.cpp */; };
+		D5B231CD200AE527008333EE /* VertexShader07.vs in Copy Files */ = {isa = PBXBuildFile; fileRef = D5B231CB200AE4F4008333EE /* VertexShader07.vs */; };
+		D5B231CE200AE527008333EE /* FragmentShader07.fs in Copy Files */ = {isa = PBXBuildFile; fileRef = D5B231CC200AE506008333EE /* FragmentShader07.fs */; };
 		D5F568E71BBF62C0000B0836 /* EasyOpenGL04.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5F568E61BBF62C0000B0836 /* EasyOpenGL04.cpp */; };
 		D5FEEC391BA732F70008231B /* EasyOpenGL01.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5FEEC381BA732F70008231B /* EasyOpenGL01.cpp */; };
 /* End PBXBuildFile section */
@@ -108,14 +117,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D57EDC962007A9FC009AE1BF /* CopyFiles */ = {
+		D57EDC962007A9FC009AE1BF /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
+				D5B231CD200AE527008333EE /* VertexShader07.vs in Copy Files */,
+				D5B231CE200AE527008333EE /* FragmentShader07.fs in Copy Files */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D57FF8CE1FE5F67700DA8F23 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -199,6 +211,9 @@
 		D5A70F661FE4AA2F001C0E2F /* FragmentShader03.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = FragmentShader03.fs; sourceTree = "<group>"; };
 		D5A70F671FE4AA2F001C0E2F /* VertexShader03.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = VertexShader03.vs; sourceTree = "<group>"; };
 		D5AD17C11FD41970009EEA08 /* EasyOpenGL_Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EasyOpenGL_Shader.cpp; path = Common/EasyOpenGL_Shader.cpp; sourceTree = "<group>"; };
+		D5B231C32009030D008333EE /* EasyOpenGL_Math.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = EasyOpenGL_Math.cpp; path = Common/EasyOpenGL_Math.cpp; sourceTree = "<group>"; };
+		D5B231CB200AE4F4008333EE /* VertexShader07.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = VertexShader07.vs; sourceTree = "<group>"; };
+		D5B231CC200AE506008333EE /* FragmentShader07.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = FragmentShader07.fs; sourceTree = "<group>"; };
 		D5F568E41BBF62C0000B0836 /* EasyOpenGL04 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EasyOpenGL04; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F568E61BBF62C0000B0836 /* EasyOpenGL04.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EasyOpenGL04.cpp; sourceTree = "<group>"; };
 		D5FEEC361BA732F70008231B /* EasyOpenGL01 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EasyOpenGL01; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -300,6 +315,7 @@
 				D5078ADE1FD2C7C700732E66 /* EasyOpenGL.cpp */,
 				D5AD17C11FD41970009EEA08 /* EasyOpenGL_Shader.cpp */,
 				D57FF8EC1FE60EF100DA8F23 /* EasyOpenGL_Error.cpp */,
+				D5B231C32009030D008333EE /* EasyOpenGL_Math.cpp */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -340,6 +356,8 @@
 			isa = PBXGroup;
 			children = (
 				D57EDC9A2007A9FC009AE1BF /* EasyOpenGL07.cpp */,
+				D5B231CB200AE4F4008333EE /* VertexShader07.vs */,
+				D5B231CC200AE506008333EE /* FragmentShader07.fs */,
 			);
 			path = EasyOpenGL07;
 			sourceTree = "<group>";
@@ -476,7 +494,7 @@
 			buildPhases = (
 				D57EDC942007A9FC009AE1BF /* Sources */,
 				D57EDC952007A9FC009AE1BF /* Frameworks */,
-				D57EDC962007A9FC009AE1BF /* CopyFiles */,
+				D57EDC962007A9FC009AE1BF /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -620,6 +638,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5AD17C31FD41971009EEA08 /* EasyOpenGL_Shader.cpp in Sources */,
+				D5B231C52009030D008333EE /* EasyOpenGL_Math.cpp in Sources */,
 				D57FF8EE1FE60EF100DA8F23 /* EasyOpenGL_Error.cpp in Sources */,
 				D5078AE11FD2C7C700732E66 /* EasyOpenGL.cpp in Sources */,
 				D54EC0681BA871C500B49841 /* EasyOpenGL02.cpp in Sources */,
@@ -631,6 +650,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D55E4B111FE4D816003DCC0C /* EasyOpenGL_Shader.cpp in Sources */,
+				D5B231C82009030D008333EE /* EasyOpenGL_Math.cpp in Sources */,
 				D57FF8F11FE60EF100DA8F23 /* EasyOpenGL_Error.cpp in Sources */,
 				D55E4B101FE4D816003DCC0C /* EasyOpenGL.cpp in Sources */,
 				D55E4B071FE4D4F7003DCC0C /* EasyOpenGL05.cpp in Sources */,
@@ -642,6 +662,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D57EDC9B2007A9FC009AE1BF /* EasyOpenGL07.cpp in Sources */,
+				D5B231CA2009030D008333EE /* EasyOpenGL_Math.cpp in Sources */,
 				D57EDCA42007B23A009AE1BF /* EasyOpenGL.cpp in Sources */,
 				D57EDCA52007B23A009AE1BF /* EasyOpenGL_Shader.cpp in Sources */,
 				D57EDCA62007B23A009AE1BF /* EasyOpenGL_Error.cpp in Sources */,
@@ -653,6 +674,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D57FF8E31FE5FBA700DA8F23 /* EasyOpenGL_Shader.cpp in Sources */,
+				D5B231C92009030D008333EE /* EasyOpenGL_Math.cpp in Sources */,
 				D57FF8F21FE60EF100DA8F23 /* EasyOpenGL_Error.cpp in Sources */,
 				D57FF8E21FE5FBA700DA8F23 /* EasyOpenGL.cpp in Sources */,
 				D57FF8D31FE5F67700DA8F23 /* EasyOpenGL06.cpp in Sources */,
@@ -664,6 +686,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D544551E1FD449A400A60DC6 /* EasyOpenGL_Shader.cpp in Sources */,
+				D5B231C62009030D008333EE /* EasyOpenGL_Math.cpp in Sources */,
 				D57FF8EF1FE60EF100DA8F23 /* EasyOpenGL_Error.cpp in Sources */,
 				D544551D1FD449A400A60DC6 /* EasyOpenGL.cpp in Sources */,
 				D58167DE1FD4444100439620 /* EasyOpenGL03.cpp in Sources */,
@@ -675,6 +698,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5AD17C41FD41971009EEA08 /* EasyOpenGL_Shader.cpp in Sources */,
+				D5B231C72009030D008333EE /* EasyOpenGL_Math.cpp in Sources */,
 				D57FF8F01FE60EF100DA8F23 /* EasyOpenGL_Error.cpp in Sources */,
 				D5078AE21FD2C7C700732E66 /* EasyOpenGL.cpp in Sources */,
 				D5F568E71BBF62C0000B0836 /* EasyOpenGL04.cpp in Sources */,
@@ -686,6 +710,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5AD17C21FD41971009EEA08 /* EasyOpenGL_Shader.cpp in Sources */,
+				D5B231C42009030D008333EE /* EasyOpenGL_Math.cpp in Sources */,
 				D57FF8ED1FE60EF100DA8F23 /* EasyOpenGL_Error.cpp in Sources */,
 				D5078AE01FD2C7C700732E66 /* EasyOpenGL.cpp in Sources */,
 				D5FEEC391BA732F70008231B /* EasyOpenGL01.cpp in Sources */,
