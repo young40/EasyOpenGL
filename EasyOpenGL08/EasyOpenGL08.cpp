@@ -79,7 +79,7 @@ int main(int argc, const char * argv[]) {
 
         glUseProgram(programID);
 
-        trans = rotate(trans, sin((float)glfwGetTime()), vec3(0.0, 0.0f, 1.0f));
+        trans = rotate(trans, sin((float)glfwGetTime())/100.0f, vec3(0.0, 0.0f, 1.0f));
 
         GLuint transPos = glGetUniformLocation(programID, "transform");
         glUniformMatrix4fv(transPos, 1, GL_FALSE, value_ptr(trans));
