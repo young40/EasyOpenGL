@@ -79,10 +79,10 @@ int main(int argc, const char * argv[]) {
 
         glUseProgram(programID);
 
-        trans = rotate(trans, sin((float)glfwGetTime())/100.0f, vec3(0.0, 0.0f, 1.0f));
+        mat4 trans2 = rotate(trans, (float)glfwGetTime(), vec3(0.0, 0.0f, 1.0f));
 
         GLuint transPos = glGetUniformLocation(programID, "transform");
-        glUniformMatrix4fv(transPos, 1, GL_FALSE, value_ptr(trans));
+        glUniformMatrix4fv(transPos, 1, GL_FALSE, value_ptr(trans2));
 
 //        glBindVertexArray(vao);
 //        glDrawArrays(GL_TRIANGLES, 0, 3);
