@@ -32,6 +32,18 @@
 		D54EC0681BA871C500B49841 /* EasyOpenGL02.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D54EC0671BA871C500B49841 /* EasyOpenGL02.cpp */; };
 		D55095E8200FA8A600CA3A33 /* FragmentShader09.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = D55095E7200FA89100CA3A33 /* FragmentShader09.fs */; };
 		D55095E9200FA8A900CA3A33 /* VertexShader09.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = D55095E6200FA87C00CA3A33 /* VertexShader09.vs */; };
+		D55095F12010F42B00CA3A33 /* EasyOpenGL10.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D55095F02010F42B00CA3A33 /* EasyOpenGL10.cpp */; };
+		D55095F52010F64000CA3A33 /* EasyOpenGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5078ADE1FD2C7C700732E66 /* EasyOpenGL.cpp */; };
+		D55095F62010F64000CA3A33 /* EasyOpenGL_Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5AD17C11FD41970009EEA08 /* EasyOpenGL_Shader.cpp */; };
+		D55095F72010F64000CA3A33 /* EasyOpenGL_Error.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D57FF8EC1FE60EF100DA8F23 /* EasyOpenGL_Error.cpp */; };
+		D55095F82010F64000CA3A33 /* EasyOpenGL_Math.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5B231C32009030D008333EE /* EasyOpenGL_Math.cpp */; };
+		D55095F92010F64800CA3A33 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC0521BA86E7400B49841 /* libglfw3.a */; };
+		D55095FA2010F64800CA3A33 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC0501BA86E4400B49841 /* Cocoa.framework */; };
+		D55095FB2010F64800CA3A33 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC04A1BA86E0E00B49841 /* CoreVideo.framework */; };
+		D55095FC2010F64800CA3A33 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC04C1BA86E1900B49841 /* IOKit.framework */; };
+		D55095FD2010F64800CA3A33 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC04E1BA86E3F00B49841 /* OpenGL.framework */; };
+		D55096002010F70A00CA3A33 /* VertexShader10.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = D55095FE2010F68F00CA3A33 /* VertexShader10.vs */; };
+		D55096012010F70C00CA3A33 /* FragmentShader10.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = D55095FF2010F68F00CA3A33 /* FragmentShader10.fs */; };
 		D55E4B071FE4D4F7003DCC0C /* EasyOpenGL05.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D55E4B061FE4D4F7003DCC0C /* EasyOpenGL05.cpp */; };
 		D55E4B0B1FE4D6D6003DCC0C /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC0521BA86E7400B49841 /* libglfw3.a */; };
 		D55E4B0C1FE4D6D6003DCC0C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC0501BA86E4400B49841 /* Cocoa.framework */; };
@@ -127,6 +139,17 @@
 			files = (
 				D57B0E7F1BBC3420009EA2A3 /* VertexShader02.vs in CopyFiles */,
 				D57B0E801BBC3420009EA2A3 /* FragmentShader02.fs in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D55095EC2010F42A00CA3A33 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				D55096002010F70A00CA3A33 /* VertexShader10.vs in CopyFiles */,
+				D55096012010F70C00CA3A33 /* FragmentShader10.fs in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +260,10 @@
 		D54EC0671BA871C500B49841 /* EasyOpenGL02.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EasyOpenGL02.cpp; sourceTree = "<group>"; };
 		D55095E6200FA87C00CA3A33 /* VertexShader09.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = VertexShader09.vs; sourceTree = "<group>"; };
 		D55095E7200FA89100CA3A33 /* FragmentShader09.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = FragmentShader09.fs; sourceTree = "<group>"; };
+		D55095EE2010F42A00CA3A33 /* EasyOpenGL10 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EasyOpenGL10; sourceTree = BUILT_PRODUCTS_DIR; };
+		D55095F02010F42B00CA3A33 /* EasyOpenGL10.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EasyOpenGL10.cpp; sourceTree = "<group>"; };
+		D55095FE2010F68F00CA3A33 /* VertexShader10.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = VertexShader10.vs; sourceTree = "<group>"; };
+		D55095FF2010F68F00CA3A33 /* FragmentShader10.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = FragmentShader10.fs; sourceTree = "<group>"; };
 		D55E4B041FE4D4F7003DCC0C /* EasyOpenGL05 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EasyOpenGL05; sourceTree = BUILT_PRODUCTS_DIR; };
 		D55E4B061FE4D4F7003DCC0C /* EasyOpenGL05.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EasyOpenGL05.cpp; sourceTree = "<group>"; };
 		D55E4B121FE4DA0A003DCC0C /* VertexShader05.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = VertexShader05.vs; sourceTree = "<group>"; };
@@ -284,6 +311,18 @@
 				D57B0E771BBBCC6B009EA2A3 /* OpenGL.framework in Frameworks */,
 				D57B0E761BBBCC63009EA2A3 /* Cocoa.framework in Frameworks */,
 				D57B0E751BBBCC51009EA2A3 /* libglfw3.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D55095EB2010F42A00CA3A33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D55095F92010F64800CA3A33 /* libglfw3.a in Frameworks */,
+				D55095FA2010F64800CA3A33 /* Cocoa.framework in Frameworks */,
+				D55095FB2010F64800CA3A33 /* CoreVideo.framework in Frameworks */,
+				D55095FC2010F64800CA3A33 /* IOKit.framework in Frameworks */,
+				D55095FD2010F64800CA3A33 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +459,16 @@
 			path = EasyOpenGL02;
 			sourceTree = "<group>";
 		};
+		D55095EF2010F42B00CA3A33 /* EasyOpenGL10 */ = {
+			isa = PBXGroup;
+			children = (
+				D55095F02010F42B00CA3A33 /* EasyOpenGL10.cpp */,
+				D55095FE2010F68F00CA3A33 /* VertexShader10.vs */,
+				D55095FF2010F68F00CA3A33 /* FragmentShader10.fs */,
+			);
+			path = EasyOpenGL10;
+			sourceTree = "<group>";
+		};
 		D55E4B051FE4D4F7003DCC0C /* EasyOpenGL05 */ = {
 			isa = PBXGroup;
 			children = (
@@ -522,6 +571,7 @@
 				D5B231D4200B615C008333EE /* EasyOpenGL08 */,
 				D5B231ED200F9DCF008333EE /* EasyOpenGL09 */,
 				D54CFFF51C947BA6008796A3 /* Common */,
+				D55095EF2010F42B00CA3A33 /* EasyOpenGL10 */,
 				D57FF8E01FE5FB3F00DA8F23 /* ThirdPart */,
 				D57FF8E51FE6067200DA8F23 /* Images */,
 				D54EC0491BA86DD400B49841 /* Frameworks */,
@@ -541,6 +591,7 @@
 				D57EDC982007A9FC009AE1BF /* EasyOpenGL07 */,
 				D5B231D3200B615C008333EE /* EasyOpenGL08 */,
 				D5B231EC200F9DCF008333EE /* EasyOpenGL09 */,
+				D55095EE2010F42A00CA3A33 /* EasyOpenGL10 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -571,6 +622,23 @@
 			name = EasyOpenGL02;
 			productName = EasyOpenGL02;
 			productReference = D54EC0651BA871C400B49841 /* EasyOpenGL02 */;
+			productType = "com.apple.product-type.tool";
+		};
+		D55095ED2010F42A00CA3A33 /* EasyOpenGL10 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D55095F22010F42B00CA3A33 /* Build configuration list for PBXNativeTarget "EasyOpenGL10" */;
+			buildPhases = (
+				D55095EA2010F42A00CA3A33 /* Sources */,
+				D55095EB2010F42A00CA3A33 /* Frameworks */,
+				D55095EC2010F42A00CA3A33 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EasyOpenGL10;
+			productName = EasyOpenGL10;
+			productReference = D55095EE2010F42A00CA3A33 /* EasyOpenGL10 */;
 			productType = "com.apple.product-type.tool";
 		};
 		D55E4B031FE4D4F7003DCC0C /* EasyOpenGL05 */ = {
@@ -721,6 +789,10 @@
 					D54EC0641BA871C400B49841 = {
 						CreatedOnToolsVersion = 7.0;
 					};
+					D55095ED2010F42A00CA3A33 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					D55E4B031FE4D4F7003DCC0C = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -774,6 +846,7 @@
 				D57EDC972007A9FC009AE1BF /* EasyOpenGL07 */,
 				D5B231D2200B615C008333EE /* EasyOpenGL08 */,
 				D5B231EB200F9DCF008333EE /* EasyOpenGL09 */,
+				D55095ED2010F42A00CA3A33 /* EasyOpenGL10 */,
 			);
 		};
 /* End PBXProject section */
@@ -788,6 +861,18 @@
 				D57FF8EE1FE60EF100DA8F23 /* EasyOpenGL_Error.cpp in Sources */,
 				D5078AE11FD2C7C700732E66 /* EasyOpenGL.cpp in Sources */,
 				D54EC0681BA871C500B49841 /* EasyOpenGL02.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D55095EA2010F42A00CA3A33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D55095F12010F42B00CA3A33 /* EasyOpenGL10.cpp in Sources */,
+				D55095F52010F64000CA3A33 /* EasyOpenGL.cpp in Sources */,
+				D55095F62010F64000CA3A33 /* EasyOpenGL_Shader.cpp in Sources */,
+				D55095F72010F64000CA3A33 /* EasyOpenGL_Error.cpp in Sources */,
+				D55095F82010F64000CA3A33 /* EasyOpenGL_Math.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -907,6 +992,48 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D55095F32010F42B00CA3A33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D55095F42010F42B00CA3A33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/libs",
@@ -1325,6 +1452,15 @@
 			buildConfigurations = (
 				D54EC06A1BA871C500B49841 /* Debug */,
 				D54EC06B1BA871C500B49841 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D55095F22010F42B00CA3A33 /* Build configuration list for PBXNativeTarget "EasyOpenGL10" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D55095F32010F42B00CA3A33 /* Debug */,
+				D55095F42010F42B00CA3A33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
