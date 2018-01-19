@@ -79,9 +79,6 @@ int main(int argc, const char * argv[]) {
     glEnableVertexAttribArray(1);
     glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5*sizeof(GL_FLOAT), (void*)(3*sizeof(GL_FLOAT)));
 
-    mat4 view;
-    view = translate(view, vec3(0.0, 0.0, -3.0f));
-
     mat4 projection;
     projection = perspective(radians(45.0f), 960.0f/640.0f, 0.1f, 100.f);
 
@@ -120,6 +117,13 @@ int main(int argc, const char * argv[]) {
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         glUseProgram(programID);
+        
+        float raidus = 30.0f;
+        float camX = sin(glfwGetTime()) * raidus;
+        float camZ = cos(glfwGetTime()) * raidus;
+        
+        mat4 view;
+        view = lookAt(vec3(camX, 0.0f, camZ), vec3(0.0f, 0.0f, 0.0f), vec3(0.0f, 1.0f, 0.0f));
 
         for (int i=0; i<10; i++){
             mat4 model;
