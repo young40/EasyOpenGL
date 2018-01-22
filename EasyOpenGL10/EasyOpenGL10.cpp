@@ -13,6 +13,16 @@
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
 
+void processInput(GLFWwindow *window);
+void mouse_callback(GLFWwindow *window, double xpos, double ypos);
+
+vec3 cameraPos   = vec3(0.0f, 0.0f,  3.0f);
+vec3 cameraFront = vec3(0.0f, 0.0f, -1.0f);
+vec3 cameraUp    = vec3(0.0f, 1.0f,  0.0f);
+
+float deltaTime = 0.0f;
+float lastTime  = 0.0f;
+
 int main(int argc, const char * argv[]) {
     GLFWwindow *window = EO_CreateWindow(960, 640, "EasyOpenGL 10 -- 摄像机");
 
@@ -112,18 +122,24 @@ int main(int argc, const char * argv[]) {
         glm::vec3(-1.3f,  1.0f, -1.5f)
     };
 
+    glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+    glfwSetCursorPosCallback(window, mouse_callback);
+
     while (not glfwWindowShouldClose(window)) {
+        processInput(window);
+
         glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         glUseProgram(programID);
         
-        float raidus = 30.0f;
-        float camX = sin(glfwGetTime()) * raidus;
-        float camZ = cos(glfwGetTime()) * raidus;
-        
+//        float raidus = 30.0f;
+//        float camX = sin(glfwGetTime()) * raidus;
+//        float camZ = cos(glfwGetTime()) * raidus;
+
         mat4 view;
-        view = lookAt(vec3(camX, 0.0f, camZ), vec3(0.0f, 0.0f, 0.0f), vec3(0.0f, 1.0f, 0.0f));
+//        view = lookAt(vec3(camX, 0.0f, camZ), vec3(0.0f, 0.0f, 0.0f), vec3(0.0f, 1.0f, 0.0f));
+        view = lookAt(cameraPos, cameraPos+cameraFront, cameraUp);
 
         for (int i=0; i<10; i++){
             mat4 model;
@@ -142,8 +158,6 @@ int main(int argc, const char * argv[]) {
             glDrawArrays(GL_TRIANGLES, 0, 36);
         }
 
-
-
         glfwPollEvents();
         glfwSwapBuffers(window);
     }
@@ -151,4 +165,96 @@ int main(int argc, const char * argv[]) {
     glfwTerminate();
 
     return 0;
+}
+
+bool keyPressingR = false;
+
+void processInput(GLFWwindow *window)
+{
+    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+    {
+        glfwSetWindowShouldClose(window, true);
+    }
+
+    float cameraSpeed = 0.05f;
+
+    if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
+    {
+        cameraPos += cameraFront*cameraSpeed;
+    }
+
+    if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
+    {
+        cameraPos -= cameraFront*cameraSpeed;
+    }
+
+    if (glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS)
+    {
+        keyPressingR = true;
+    }
+    if (keyPressingR && glfwGetKey(window, GLFW_KEY_R) == GLFW_RELEASE)
+    {
+        cameraPos    = vec3(0.0f, 0.0f, 3.0f);
+        cameraFront  = vec3(0.0f, 0.0f, -1.0f);
+        keyPressingR = false;
+    }
+
+    if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
+    {
+        cameraPos -= normalize(cross(cameraFront, cameraUp)) * cameraSpeed;
+    }
+
+    if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
+    {
+        cameraPos += normalize(cross(cameraFront, cameraUp)) * cameraSpeed;
+    }
+}
+
+double lastX = 960.0/2.0;
+double lastY = 640.0/2.0;
+
+bool isFirstMouse = true;
+
+float gyaw = -90.0;
+float gpitch = 0;
+
+void mouse_callback(GLFWwindow *window, double xpos, double ypos)
+{
+    if(isFirstMouse)
+    {
+        lastX = xpos;
+        lastY = ypos;
+        isFirstMouse = false;
+    }
+    float xoffset = xpos - lastX;
+    float yoffset = ypos - lastY;
+    lastX = xpos;
+    lastY = ypos;
+
+    float sensitivity = 0.05f;
+    xoffset *= sensitivity;
+    yoffset *= sensitivity;
+
+    gyaw += xoffset;
+    gpitch += yoffset;
+
+    if (gpitch > 89)
+    {
+        gpitch = 89;
+    }
+    if (gpitch < -89)
+    {
+        gpitch = -89;
+    }
+
+    vec2 x(gyaw, gpitch);
+    dump(x, 2);
+
+    vec3 front;
+    front.x = cos(radians(gyaw)) * cos(radians(gpitch));
+    front.y = sin(radians(gpitch));
+    front.z = sin(radians(gyaw)) * cos(radians(gpitch));
+
+//    dump(front);
+    cameraFront = normalize(front);
 }
