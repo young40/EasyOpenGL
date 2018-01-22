@@ -15,13 +15,15 @@
 
 void processInput(GLFWwindow *window);
 void mouse_callback(GLFWwindow *window, double xpos, double ypos);
+void scroll_callback(GLFWwindow *window, double xpos, double ypos);
 
 vec3 cameraPos   = vec3(0.0f, 0.0f,  3.0f);
 vec3 cameraFront = vec3(0.0f, 0.0f, -1.0f);
 vec3 cameraUp    = vec3(0.0f, 1.0f,  0.0f);
 
-float deltaTime = 0.0f;
-float lastTime  = 0.0f;
+float deltaTime =  0.0f;
+float lastTime  =  0.0f;
+float curFov    = 45.0f;
 
 int main(int argc, const char * argv[]) {
     GLFWwindow *window = EO_CreateWindow(960, 640, "EasyOpenGL 10 -- 摄像机");
@@ -89,9 +91,6 @@ int main(int argc, const char * argv[]) {
     glEnableVertexAttribArray(1);
     glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5*sizeof(GL_FLOAT), (void*)(3*sizeof(GL_FLOAT)));
 
-    mat4 projection;
-    projection = perspective(radians(45.0f), 960.0f/640.0f, 0.1f, 100.f);
-
     glEnable(GL_DEPTH_TEST);
 
     stbi_set_flip_vertically_on_load(true);
@@ -124,6 +123,7 @@ int main(int argc, const char * argv[]) {
 
     glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
     glfwSetCursorPosCallback(window, mouse_callback);
+    glfwSetScrollCallback(window, scroll_callback);
 
     while (not glfwWindowShouldClose(window)) {
         processInput(window);
@@ -142,6 +142,9 @@ int main(int argc, const char * argv[]) {
         view = lookAt(cameraPos, cameraPos+cameraFront, cameraUp);
 
         for (int i=0; i<10; i++){
+            mat4 projection;
+            projection = perspective(radians(curFov), 960.0f/640.0f, 0.1f, 100.f);
+
             mat4 model;
             model = translate(model, cubePositions[i]);
             float angel = 20.0f*(i+1);
@@ -257,4 +260,20 @@ void mouse_callback(GLFWwindow *window, double xpos, double ypos)
 
 //    dump(front);
     cameraFront = normalize(front);
+}
+
+void scroll_callback(GLFWwindow *window, double xoffset, double yoffset)
+{
+    if (curFov >= 1.0f && curFov <= 45.0f)
+    {
+        curFov -= yoffset;
+    }
+    if (curFov < 1.0f)
+    {
+        curFov = 1.0f;
+    }
+    if (curFov > 45.0f)
+    {
+        curFov = 45.0f;
+    }
 }
