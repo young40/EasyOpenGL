@@ -10,6 +10,16 @@
 		D5078AE01FD2C7C700732E66 /* EasyOpenGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5078ADE1FD2C7C700732E66 /* EasyOpenGL.cpp */; };
 		D5078AE11FD2C7C700732E66 /* EasyOpenGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5078ADE1FD2C7C700732E66 /* EasyOpenGL.cpp */; };
 		D5078AE21FD2C7C700732E66 /* EasyOpenGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5078ADE1FD2C7C700732E66 /* EasyOpenGL.cpp */; };
+		D51B11D3201B545B0057CD5C /* EasyOpenGL11.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D51B11D2201B545B0057CD5C /* EasyOpenGL11.cpp */; };
+		D51B11D7201B57090057CD5C /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC0521BA86E7400B49841 /* libglfw3.a */; };
+		D51B11D8201B57090057CD5C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC0501BA86E4400B49841 /* Cocoa.framework */; };
+		D51B11D9201B57090057CD5C /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC04A1BA86E0E00B49841 /* CoreVideo.framework */; };
+		D51B11DA201B57090057CD5C /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC04C1BA86E1900B49841 /* IOKit.framework */; };
+		D51B11DB201B57090057CD5C /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC04E1BA86E3F00B49841 /* OpenGL.framework */; };
+		D51B11DC201B57120057CD5C /* EasyOpenGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5078ADE1FD2C7C700732E66 /* EasyOpenGL.cpp */; };
+		D51B11DD201B57120057CD5C /* EasyOpenGL_Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5AD17C11FD41970009EEA08 /* EasyOpenGL_Shader.cpp */; };
+		D51B11DE201B57120057CD5C /* EasyOpenGL_Error.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D57FF8EC1FE60EF100DA8F23 /* EasyOpenGL_Error.cpp */; };
+		D51B11DF201B57120057CD5C /* EasyOpenGL_Math.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5B231C32009030D008333EE /* EasyOpenGL_Math.cpp */; };
 		D52DD7A11BCC066D001C997D /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC04A1BA86E0E00B49841 /* CoreVideo.framework */; };
 		D52DD7A21BCC0676001C997D /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC04C1BA86E1900B49841 /* IOKit.framework */; };
 		D52DD7A31BCC067D001C997D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC04E1BA86E3F00B49841 /* OpenGL.framework */; };
@@ -131,6 +141,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		D51B11CE201B545B0057CD5C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		D54EC0631BA871C400B49841 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 12;
@@ -248,6 +267,8 @@
 /* Begin PBXFileReference section */
 		D5078ADE1FD2C7C700732E66 /* EasyOpenGL.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = EasyOpenGL.cpp; path = Common/EasyOpenGL.cpp; sourceTree = "<group>"; };
 		D5078ADF1FD2C7C700732E66 /* EasyOpenGL.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = EasyOpenGL.hpp; path = Common/EasyOpenGL.hpp; sourceTree = "<group>"; };
+		D51B11D0201B545B0057CD5C /* EasyOpenGL11 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EasyOpenGL11; sourceTree = BUILT_PRODUCTS_DIR; };
+		D51B11D2201B545B0057CD5C /* EasyOpenGL11.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EasyOpenGL11.cpp; sourceTree = "<group>"; };
 		D54C3A491FD2EB890026658F /* FragmentShader04.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = FragmentShader04.fs; sourceTree = "<group>"; };
 		D54C3A4A1FD2EB8A0026658F /* VertexShader04.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = VertexShader04.vs; sourceTree = "<group>"; };
 		D54EC04A1BA86E0E00B49841 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
@@ -302,6 +323,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D51B11CD201B545B0057CD5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D51B11D7201B57090057CD5C /* libglfw3.a in Frameworks */,
+				D51B11D8201B57090057CD5C /* Cocoa.framework in Frameworks */,
+				D51B11D9201B57090057CD5C /* CoreVideo.framework in Frameworks */,
+				D51B11DA201B57090057CD5C /* IOKit.framework in Frameworks */,
+				D51B11DB201B57090057CD5C /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D54EC0621BA871C400B49841 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -425,6 +458,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D51B11D1201B545B0057CD5C /* EasyOpenGL11 */ = {
+			isa = PBXGroup;
+			children = (
+				D51B11D2201B545B0057CD5C /* EasyOpenGL11.cpp */,
+			);
+			path = EasyOpenGL11;
+			sourceTree = "<group>";
+		};
 		D54CFFF51C947BA6008796A3 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -571,6 +612,7 @@
 				D5B231D4200B615C008333EE /* EasyOpenGL08 */,
 				D5B231ED200F9DCF008333EE /* EasyOpenGL09 */,
 				D55095EF2010F42B00CA3A33 /* EasyOpenGL10 */,
+				D51B11D1201B545B0057CD5C /* EasyOpenGL11 */,
 				D54CFFF51C947BA6008796A3 /* Common */,
 				D57FF8E01FE5FB3F00DA8F23 /* ThirdPart */,
 				D57FF8E51FE6067200DA8F23 /* Images */,
@@ -592,6 +634,7 @@
 				D5B231D3200B615C008333EE /* EasyOpenGL08 */,
 				D5B231EC200F9DCF008333EE /* EasyOpenGL09 */,
 				D55095EE2010F42A00CA3A33 /* EasyOpenGL10 */,
+				D51B11D0201B545B0057CD5C /* EasyOpenGL11 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -607,6 +650,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D51B11CF201B545B0057CD5C /* EasyOpenGL11 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D51B11D6201B545B0057CD5C /* Build configuration list for PBXNativeTarget "EasyOpenGL11" */;
+			buildPhases = (
+				D51B11CC201B545B0057CD5C /* Sources */,
+				D51B11CD201B545B0057CD5C /* Frameworks */,
+				D51B11CE201B545B0057CD5C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EasyOpenGL11;
+			productName = EasyOpenGL11;
+			productReference = D51B11D0201B545B0057CD5C /* EasyOpenGL11 */;
+			productType = "com.apple.product-type.tool";
+		};
 		D54EC0641BA871C400B49841 /* EasyOpenGL02 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D54EC0691BA871C500B49841 /* Build configuration list for PBXNativeTarget "EasyOpenGL02" */;
@@ -786,6 +846,10 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Peter Young";
 				TargetAttributes = {
+					D51B11CF201B545B0057CD5C = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					D54EC0641BA871C400B49841 = {
 						CreatedOnToolsVersion = 7.0;
 					};
@@ -847,11 +911,24 @@
 				D5B231D2200B615C008333EE /* EasyOpenGL08 */,
 				D5B231EB200F9DCF008333EE /* EasyOpenGL09 */,
 				D55095ED2010F42A00CA3A33 /* EasyOpenGL10 */,
+				D51B11CF201B545B0057CD5C /* EasyOpenGL11 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D51B11CC201B545B0057CD5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D51B11D3201B545B0057CD5C /* EasyOpenGL11.cpp in Sources */,
+				D51B11DC201B57120057CD5C /* EasyOpenGL.cpp in Sources */,
+				D51B11DD201B57120057CD5C /* EasyOpenGL_Shader.cpp in Sources */,
+				D51B11DE201B57120057CD5C /* EasyOpenGL_Error.cpp in Sources */,
+				D51B11DF201B57120057CD5C /* EasyOpenGL_Math.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D54EC0611BA871C400B49841 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -975,6 +1052,48 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		D51B11D4201B545B0057CD5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D51B11D5201B545B0057CD5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		D54EC06A1BA871C500B49841 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1447,6 +1566,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D51B11D6201B545B0057CD5C /* Build configuration list for PBXNativeTarget "EasyOpenGL11" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D51B11D4201B545B0057CD5C /* Debug */,
+				D51B11D5201B545B0057CD5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D54EC0691BA871C500B49841 /* Build configuration list for PBXNativeTarget "EasyOpenGL02" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
