@@ -10,6 +10,17 @@
 		D5078AE01FD2C7C700732E66 /* EasyOpenGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5078ADE1FD2C7C700732E66 /* EasyOpenGL.cpp */; };
 		D5078AE11FD2C7C700732E66 /* EasyOpenGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5078ADE1FD2C7C700732E66 /* EasyOpenGL.cpp */; };
 		D5078AE21FD2C7C700732E66 /* EasyOpenGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5078ADE1FD2C7C700732E66 /* EasyOpenGL.cpp */; };
+		D5156EE72020B62300B8B8DB /* EasyOpenGL_Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5156EE52020B62300B8B8DB /* EasyOpenGL_Camera.cpp */; };
+		D5156EE82020B62300B8B8DB /* EasyOpenGL_Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5156EE52020B62300B8B8DB /* EasyOpenGL_Camera.cpp */; };
+		D5156EE92020B62300B8B8DB /* EasyOpenGL_Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5156EE52020B62300B8B8DB /* EasyOpenGL_Camera.cpp */; };
+		D5156EEA2020B62300B8B8DB /* EasyOpenGL_Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5156EE52020B62300B8B8DB /* EasyOpenGL_Camera.cpp */; };
+		D5156EEB2020B62300B8B8DB /* EasyOpenGL_Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5156EE52020B62300B8B8DB /* EasyOpenGL_Camera.cpp */; };
+		D5156EEC2020B62300B8B8DB /* EasyOpenGL_Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5156EE52020B62300B8B8DB /* EasyOpenGL_Camera.cpp */; };
+		D5156EED2020B62300B8B8DB /* EasyOpenGL_Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5156EE52020B62300B8B8DB /* EasyOpenGL_Camera.cpp */; };
+		D5156EEE2020B62300B8B8DB /* EasyOpenGL_Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5156EE52020B62300B8B8DB /* EasyOpenGL_Camera.cpp */; };
+		D5156EEF2020B62300B8B8DB /* EasyOpenGL_Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5156EE52020B62300B8B8DB /* EasyOpenGL_Camera.cpp */; };
+		D5156EF02020B62300B8B8DB /* EasyOpenGL_Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5156EE52020B62300B8B8DB /* EasyOpenGL_Camera.cpp */; };
+		D5156EF12020B62300B8B8DB /* EasyOpenGL_Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5156EE52020B62300B8B8DB /* EasyOpenGL_Camera.cpp */; };
 		D51B11D3201B545B0057CD5C /* EasyOpenGL11.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D51B11D2201B545B0057CD5C /* EasyOpenGL11.cpp */; };
 		D51B11D7201B57090057CD5C /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC0521BA86E7400B49841 /* libglfw3.a */; };
 		D51B11D8201B57090057CD5C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC0501BA86E4400B49841 /* Cocoa.framework */; };
@@ -267,6 +278,7 @@
 /* Begin PBXFileReference section */
 		D5078ADE1FD2C7C700732E66 /* EasyOpenGL.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = EasyOpenGL.cpp; path = Common/EasyOpenGL.cpp; sourceTree = "<group>"; };
 		D5078ADF1FD2C7C700732E66 /* EasyOpenGL.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = EasyOpenGL.hpp; path = Common/EasyOpenGL.hpp; sourceTree = "<group>"; };
+		D5156EE52020B62300B8B8DB /* EasyOpenGL_Camera.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = EasyOpenGL_Camera.cpp; path = Common/EasyOpenGL_Camera.cpp; sourceTree = "<group>"; };
 		D51B11D0201B545B0057CD5C /* EasyOpenGL11 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EasyOpenGL11; sourceTree = BUILT_PRODUCTS_DIR; };
 		D51B11D2201B545B0057CD5C /* EasyOpenGL11.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EasyOpenGL11.cpp; sourceTree = "<group>"; };
 		D54C3A491FD2EB890026658F /* FragmentShader04.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = FragmentShader04.fs; sourceTree = "<group>"; };
@@ -474,6 +486,7 @@
 				D5AD17C11FD41970009EEA08 /* EasyOpenGL_Shader.cpp */,
 				D57FF8EC1FE60EF100DA8F23 /* EasyOpenGL_Error.cpp */,
 				D5B231C32009030D008333EE /* EasyOpenGL_Math.cpp */,
+				D5156EE52020B62300B8B8DB /* EasyOpenGL_Camera.cpp */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -926,6 +939,7 @@
 				D51B11DD201B57120057CD5C /* EasyOpenGL_Shader.cpp in Sources */,
 				D51B11DE201B57120057CD5C /* EasyOpenGL_Error.cpp in Sources */,
 				D51B11DF201B57120057CD5C /* EasyOpenGL_Math.cpp in Sources */,
+				D5156EF12020B62300B8B8DB /* EasyOpenGL_Camera.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -938,6 +952,7 @@
 				D57FF8EE1FE60EF100DA8F23 /* EasyOpenGL_Error.cpp in Sources */,
 				D5078AE11FD2C7C700732E66 /* EasyOpenGL.cpp in Sources */,
 				D54EC0681BA871C500B49841 /* EasyOpenGL02.cpp in Sources */,
+				D5156EE82020B62300B8B8DB /* EasyOpenGL_Camera.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -950,6 +965,7 @@
 				D55095F62010F64000CA3A33 /* EasyOpenGL_Shader.cpp in Sources */,
 				D55095F72010F64000CA3A33 /* EasyOpenGL_Error.cpp in Sources */,
 				D55095F82010F64000CA3A33 /* EasyOpenGL_Math.cpp in Sources */,
+				D5156EF02020B62300B8B8DB /* EasyOpenGL_Camera.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -962,6 +978,7 @@
 				D57FF8F11FE60EF100DA8F23 /* EasyOpenGL_Error.cpp in Sources */,
 				D55E4B101FE4D816003DCC0C /* EasyOpenGL.cpp in Sources */,
 				D55E4B071FE4D4F7003DCC0C /* EasyOpenGL05.cpp in Sources */,
+				D5156EEB2020B62300B8B8DB /* EasyOpenGL_Camera.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -974,6 +991,7 @@
 				D57EDCA42007B23A009AE1BF /* EasyOpenGL.cpp in Sources */,
 				D57EDCA52007B23A009AE1BF /* EasyOpenGL_Shader.cpp in Sources */,
 				D57EDCA62007B23A009AE1BF /* EasyOpenGL_Error.cpp in Sources */,
+				D5156EED2020B62300B8B8DB /* EasyOpenGL_Camera.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -986,6 +1004,7 @@
 				D57FF8F21FE60EF100DA8F23 /* EasyOpenGL_Error.cpp in Sources */,
 				D57FF8E21FE5FBA700DA8F23 /* EasyOpenGL.cpp in Sources */,
 				D57FF8D31FE5F67700DA8F23 /* EasyOpenGL06.cpp in Sources */,
+				D5156EEC2020B62300B8B8DB /* EasyOpenGL_Camera.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -998,6 +1017,7 @@
 				D57FF8EF1FE60EF100DA8F23 /* EasyOpenGL_Error.cpp in Sources */,
 				D544551D1FD449A400A60DC6 /* EasyOpenGL.cpp in Sources */,
 				D58167DE1FD4444100439620 /* EasyOpenGL03.cpp in Sources */,
+				D5156EE92020B62300B8B8DB /* EasyOpenGL_Camera.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1010,6 +1030,7 @@
 				D5B231DD200B6278008333EE /* EasyOpenGL_Error.cpp in Sources */,
 				D5B231DE200B6278008333EE /* EasyOpenGL_Math.cpp in Sources */,
 				D5B231D6200B615C008333EE /* EasyOpenGL08.cpp in Sources */,
+				D5156EEE2020B62300B8B8DB /* EasyOpenGL_Camera.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1022,6 +1043,7 @@
 				D5B231F9200F9EC4008333EE /* EasyOpenGL_Shader.cpp in Sources */,
 				D5B231FA200F9EC4008333EE /* EasyOpenGL_Error.cpp in Sources */,
 				D5B231FB200F9EC4008333EE /* EasyOpenGL_Math.cpp in Sources */,
+				D5156EEF2020B62300B8B8DB /* EasyOpenGL_Camera.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1034,6 +1056,7 @@
 				D57FF8F01FE60EF100DA8F23 /* EasyOpenGL_Error.cpp in Sources */,
 				D5078AE21FD2C7C700732E66 /* EasyOpenGL.cpp in Sources */,
 				D5F568E71BBF62C0000B0836 /* EasyOpenGL04.cpp in Sources */,
+				D5156EEA2020B62300B8B8DB /* EasyOpenGL_Camera.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1046,6 +1069,7 @@
 				D57FF8ED1FE60EF100DA8F23 /* EasyOpenGL_Error.cpp in Sources */,
 				D5078AE01FD2C7C700732E66 /* EasyOpenGL.cpp in Sources */,
 				D5FEEC391BA732F70008231B /* EasyOpenGL01.cpp in Sources */,
+				D5156EE72020B62300B8B8DB /* EasyOpenGL_Camera.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

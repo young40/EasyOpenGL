@@ -43,4 +43,47 @@ void dump(mat2 &m2, int len = 0);
 void dump(mat3 &m3, int len = 0);
 void dump(mat4 &m4, int len = 0);
 
+enum Movement
+{
+    kForward,
+    kBackward,
+    kLeft,
+    kRight
+};
+
+class EO_Camera
+{
+public:
+    vec3 mPosition;
+    vec3 mFront;
+    vec3 mUp;
+    vec3 mRight;
+    vec3 WorldUp;
+
+    float mYaw;
+    float mPitch;
+
+    float mMovementSpeed;
+    float mMouseSensitivity;
+    float mZoom;
+
+    EO_Camera(vec3  position = vec3(0.0f, 0.0f, 0.0f),
+              vec3  up       = vec3(0.0f, 1.0f, 0.0f),
+              float yaw      = -90.0f,
+              float pitch    =   0.0f);
+
+    EO_Camera(float posX, float posY, float posZ,
+              float  upX, float  upY, float  upZ,
+              float yaw, float pitch);
+
+    mat4 getViewMatrix();
+
+    void processKeyboard(Movement direction, float deltaTime);
+    void processMouseMovement(float xoffset, float yoffset, bool constrainPitch = true);
+    void processScroll(float yoffset);
+
+private:
+    void updateCameraVectors();
+};
+
 #endif /* EasyOpenGL_hpp */
