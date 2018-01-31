@@ -15,7 +15,7 @@ mMouseSensitivity(0.1f),
 mZoom(45.0f)
 {
     mPosition = position;
-    mUp       = up;
+    mWorldUp  = up;
     mYaw      = yaw;
     mPitch    = pitch;
     updateCameraVectors();
@@ -64,6 +64,9 @@ void EO_Camera::processMouseMovement(float xoffset, float yoffset, bool constrai
     xoffset *= mMouseSensitivity;
     yoffset *= mMouseSensitivity;
 
+    mYaw   += xoffset;
+    mPitch += yoffset;
+
     if (constrainPitch)
     {
         mPitch = mPitch >  89.0f ?  89.0f : mPitch;
@@ -87,8 +90,8 @@ void EO_Camera::updateCameraVectors()
     front.y = sin(radians(mPitch));
     front.z = sin(radians(mYaw)) * cos(radians(mPitch));
 
-    front  = normalize(front);
+    mFront  = normalize(front);
 
-    mRight = normalize(cross(mFront, mUp));
+    mRight = normalize(cross(mFront, mWorldUp));
     mUp    = normalize(cross(mRight, mFront));
 }

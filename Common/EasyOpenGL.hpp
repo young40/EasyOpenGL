@@ -58,7 +58,7 @@ public:
     vec3 mFront;
     vec3 mUp;
     vec3 mRight;
-    vec3 WorldUp;
+    vec3 mWorldUp;
 
     float mYaw;
     float mPitch;

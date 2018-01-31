@@ -12,17 +12,18 @@
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
 
-void processInput(GLFWwindow *window);
-void mouse_callback(GLFWwindow *window, double xpos, double ypos);
+void processInput   (GLFWwindow *window);
+void mouse_callback (GLFWwindow *window, double xpos, double ypos);
 void scroll_callback(GLFWwindow *window, double xpos, double ypos);
 
 vec3 cameraPos   = vec3(0.0f, 0.0f,  3.0f);
 vec3 cameraFront = vec3(0.0f, 0.0f, -1.0f);
 vec3 cameraUp    = vec3(0.0f, 1.0f,  0.0f);
 
+EO_Camera camera(cameraPos, cameraUp);
+
 float deltaTime =  0.0f;
 float lastTime  =  0.0f;
-float curFov    = 45.0f;
 
 int main(int argc, const char * argv[]) {
     GLFWwindow *window = EO_CreateWindow(960, 640, "EasyOpenGL 10 -- 摄像机");
@@ -125,6 +126,10 @@ int main(int argc, const char * argv[]) {
     glfwSetScrollCallback(window, scroll_callback);
 
     while (not glfwWindowShouldClose(window)) {
+        float currentFrame = glfwGetTime();
+        deltaTime = currentFrame - lastTime;
+        lastTime = currentFrame;
+
         processInput(window);
 
         glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
@@ -132,17 +137,11 @@ int main(int argc, const char * argv[]) {
 
         glUseProgram(programID);
 
-        //        float raidus = 30.0f;
-        //        float camX = sin(glfwGetTime()) * raidus;
-        //        float camZ = cos(glfwGetTime()) * raidus;
-
-        mat4 view;
-        //        view = lookAt(vec3(camX, 0.0f, camZ), vec3(0.0f, 0.0f, 0.0f), vec3(0.0f, 1.0f, 0.0f));
-        view = lookAt(cameraPos, cameraPos+cameraFront, cameraUp);
+        mat4 view = camera.getViewMatrix();
 
         for (int i=0; i<10; i++){
             mat4 projection;
-            projection = perspective(radians(curFov), 960.0f/640.0f, 0.1f, 100.f);
+            projection = perspective(radians(camera.mZoom), 960.0f/640.0f, 0.1f, 100.f);
 
             mat4 model;
             model = translate(model, cubePositions[i]);
@@ -178,16 +177,14 @@ void processInput(GLFWwindow *window)
         glfwSetWindowShouldClose(window, true);
     }
 
-    float cameraSpeed = 0.05f;
-
     if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
     {
-        cameraPos += cameraFront*cameraSpeed;
+        camera.processKeyboard(Movement::kForward, deltaTime);
     }
 
     if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
     {
-        cameraPos -= cameraFront*cameraSpeed;
+        camera.processKeyboard(Movement::kBackward, deltaTime);
     }
 
     if (glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS)
@@ -199,16 +196,18 @@ void processInput(GLFWwindow *window)
         cameraPos    = vec3(0.0f, 0.0f, 3.0f);
         cameraFront  = vec3(0.0f, 0.0f, -1.0f);
         keyPressingR = false;
+        camera.mPosition = cameraPos;
+        camera.mFront    = cameraFront;
     }
 
     if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
     {
-        cameraPos -= normalize(cross(cameraFront, cameraUp)) * cameraSpeed;
+        camera.processKeyboard(Movement::kLeft, deltaTime);
     }
 
     if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
     {
-        cameraPos += normalize(cross(cameraFront, cameraUp)) * cameraSpeed;
+        camera.processKeyboard(Movement::kRight, deltaTime);
     }
 }
 
@@ -233,46 +232,10 @@ void mouse_callback(GLFWwindow *window, double xpos, double ypos)
     lastX = xpos;
     lastY = ypos;
 
-    float sensitivity = 0.05f;
-    xoffset *= sensitivity;
-    yoffset *= sensitivity;
-
-    gyaw += xoffset;
-    gpitch += yoffset;
-
-    if (gpitch > 89)
-    {
-        gpitch = 89;
-    }
-    if (gpitch < -89)
-    {
-        gpitch = -89;
-    }
-
-    vec2 x(gyaw, gpitch);
-    dump(x, 2);
-
-    vec3 front;
-    front.x = cos(radians(gyaw)) * cos(radians(gpitch));
-    front.y = sin(radians(gpitch));
-    front.z = sin(radians(gyaw)) * cos(radians(gpitch));
-
-    //    dump(front);
-    cameraFront = normalize(front);
+    camera.processMouseMovement(xoffset, yoffset);
 }
 
 void scroll_callback(GLFWwindow *window, double xoffset, double yoffset)
 {
-    if (curFov >= 1.0f && curFov <= 45.0f)
-    {
-        curFov -= yoffset;
-    }
-    if (curFov < 1.0f)
-    {
-        curFov = 1.0f;
-    }
-    if (curFov > 45.0f)
-    {
-        curFov = 45.0f;
-    }
+    camera.processScroll(yoffset);
 }
