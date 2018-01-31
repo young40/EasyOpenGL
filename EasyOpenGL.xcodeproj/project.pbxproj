@@ -21,6 +21,8 @@
 		D5156EEF2020B62300B8B8DB /* EasyOpenGL_Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5156EE52020B62300B8B8DB /* EasyOpenGL_Camera.cpp */; };
 		D5156EF02020B62300B8B8DB /* EasyOpenGL_Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5156EE52020B62300B8B8DB /* EasyOpenGL_Camera.cpp */; };
 		D5156EF12020B62300B8B8DB /* EasyOpenGL_Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5156EE52020B62300B8B8DB /* EasyOpenGL_Camera.cpp */; };
+		D5156EF420220B4200B8B8DB /* FragmentShader11.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = D5156EF220220B2D00B8B8DB /* FragmentShader11.fs */; };
+		D5156EF520220B4200B8B8DB /* VertexShader11.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = D5156EF320220B2D00B8B8DB /* VertexShader11.vs */; };
 		D51B11D3201B545B0057CD5C /* EasyOpenGL11.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D51B11D2201B545B0057CD5C /* EasyOpenGL11.cpp */; };
 		D51B11D7201B57090057CD5C /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC0521BA86E7400B49841 /* libglfw3.a */; };
 		D51B11D8201B57090057CD5C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC0501BA86E4400B49841 /* Cocoa.framework */; };
@@ -154,12 +156,14 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		D51B11CE201B545B0057CD5C /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
+				D5156EF420220B4200B8B8DB /* FragmentShader11.fs in CopyFiles */,
+				D5156EF520220B4200B8B8DB /* VertexShader11.vs in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D54EC0631BA871C400B49841 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -279,6 +283,8 @@
 		D5078ADE1FD2C7C700732E66 /* EasyOpenGL.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = EasyOpenGL.cpp; path = Common/EasyOpenGL.cpp; sourceTree = "<group>"; };
 		D5078ADF1FD2C7C700732E66 /* EasyOpenGL.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = EasyOpenGL.hpp; path = Common/EasyOpenGL.hpp; sourceTree = "<group>"; };
 		D5156EE52020B62300B8B8DB /* EasyOpenGL_Camera.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = EasyOpenGL_Camera.cpp; path = Common/EasyOpenGL_Camera.cpp; sourceTree = "<group>"; };
+		D5156EF220220B2D00B8B8DB /* FragmentShader11.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = FragmentShader11.fs; sourceTree = "<group>"; };
+		D5156EF320220B2D00B8B8DB /* VertexShader11.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = VertexShader11.vs; sourceTree = "<group>"; };
 		D51B11D0201B545B0057CD5C /* EasyOpenGL11 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EasyOpenGL11; sourceTree = BUILT_PRODUCTS_DIR; };
 		D51B11D2201B545B0057CD5C /* EasyOpenGL11.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EasyOpenGL11.cpp; sourceTree = "<group>"; };
 		D54C3A491FD2EB890026658F /* FragmentShader04.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = FragmentShader04.fs; sourceTree = "<group>"; };
@@ -474,6 +480,8 @@
 			isa = PBXGroup;
 			children = (
 				D51B11D2201B545B0057CD5C /* EasyOpenGL11.cpp */,
+				D5156EF220220B2D00B8B8DB /* FragmentShader11.fs */,
+				D5156EF320220B2D00B8B8DB /* VertexShader11.vs */,
 			);
 			path = EasyOpenGL11;
 			sourceTree = "<group>";

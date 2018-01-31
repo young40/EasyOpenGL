@@ -39,12 +39,38 @@ mat4 EO_Camera::getViewMatrix()
 
 void EO_Camera::processKeyboard(Movement direction, float deltaTime)
 {
+    float velocity = mMovementSpeed * deltaTime;
 
+    if (direction == Movement::kForward)
+    {
+        mPosition += mFront * velocity;
+    }
+    if (direction == Movement::kBackward)
+    {
+        mPosition -= mFront * velocity;
+    }
+    if (direction == Movement::kLeft)
+    {
+        mPosition -= mRight * velocity;
+    }
+    if (direction == Movement::kRight)
+    {
+        mPosition += mRight * velocity;
+    }
 }
 
 void EO_Camera::processMouseMovement(float xoffset, float yoffset, bool constrainPitch)
 {
+    xoffset *= mMouseSensitivity;
+    yoffset *= mMouseSensitivity;
 
+    if (constrainPitch)
+    {
+        mPitch = mPitch >  89.0f ?  89.0f : mPitch;
+        mPitch = mPitch < -89.0f ? -89.0f : mPitch;
+    }
+
+    updateCameraVectors();
 }
 
 void EO_Camera::processScroll(float yoffset)
