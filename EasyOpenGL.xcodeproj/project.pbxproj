@@ -697,10 +697,10 @@
 			isa = PBXGroup;
 			children = (
 				D5A6A56A20274925009998AD /* EasyOpenGL13.cpp */,
-				D5A6A579202749A9009998AD /* LightFragment13.fs */,
 				D5A6A57C202749AA009998AD /* LightVertex13.vs */,
-				D5A6A57B202749AA009998AD /* LampFragment13.fs */,
+				D5A6A579202749A9009998AD /* LightFragment13.fs */,
 				D5A6A57A202749A9009998AD /* LampVertex13.vs */,
+				D5A6A57B202749AA009998AD /* LampFragment13.fs */,
 			);
 			path = EasyOpenGL13;
 			sourceTree = "<group>";

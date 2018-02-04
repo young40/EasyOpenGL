@@ -95,7 +95,7 @@ int main(int argc, const char * argv[]) {
     {
         camera.stepFrame(window);
 
-        glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+        glClearColor(0.1f, 0.1f, 0.1f, 1.0f); // 不是全黑的背景, 方便看其他物体
         glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
 
         glUseProgram(lightProgram);
@@ -105,6 +105,7 @@ int main(int argc, const char * argv[]) {
         mat4 projection = perspective(radians(camera.mZoom), 960.0f/640.0f, 0.1f, 100.0f);
         mat4 view = camera.getViewMatrix();
         mat4 model;
+        model = rotate(model, (float)glfwGetTime(), vec3(1.0f, 1.0f, 1.0f));
 
         glUniformMatrix4fv(glGetUniformLocation(lightProgram, "aProjection"), 1, GL_FALSE, value_ptr(projection));
         glUniformMatrix4fv(glGetUniformLocation(lightProgram, "aView"), 1, GL_FALSE, value_ptr(view));
