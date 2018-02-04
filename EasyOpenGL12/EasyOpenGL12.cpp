@@ -13,7 +13,7 @@
 int main(int argc, const char * argv[]) {
     GLFWwindow *window = EO_CreateWindow(960, 640, "EasyOpenGL 12 -- 光照场景");
 
-    vec3 cameraPos = vec3(0, 0, 3);
+    vec3 cameraPos = vec3(0, 0, 5.0f);
     vec3 cameraUp  = vec3(0, 1, 0);
     EO_Camera camera = EO_Camera(cameraPos, cameraUp);
     camera.bindingWindow(window);
