@@ -45,7 +45,7 @@
 		D54455211FD449B400A60DC6 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC04A1BA86E0E00B49841 /* CoreVideo.framework */; };
 		D54455221FD449B400A60DC6 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC04C1BA86E1900B49841 /* IOKit.framework */; };
 		D54455231FD449B400A60DC6 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC04E1BA86E3F00B49841 /* OpenGL.framework */; };
-		D54AFB63202692A7009EA24B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D54AFB62202692A7009EA24B /* main.cpp */; };
+		D54AFB63202692A7009EA24B /* EasyOpenGL12.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D54AFB62202692A7009EA24B /* EasyOpenGL12.cpp */; };
 		D54AFB67202692B9009EA24B /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC0521BA86E7400B49841 /* libglfw3.a */; };
 		D54AFB68202692B9009EA24B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC0501BA86E4400B49841 /* Cocoa.framework */; };
 		D54AFB69202692B9009EA24B /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54EC04A1BA86E0E00B49841 /* CoreVideo.framework */; };
@@ -124,6 +124,10 @@
 		D57FF8F11FE60EF100DA8F23 /* EasyOpenGL_Error.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D57FF8EC1FE60EF100DA8F23 /* EasyOpenGL_Error.cpp */; };
 		D57FF8F21FE60EF100DA8F23 /* EasyOpenGL_Error.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D57FF8EC1FE60EF100DA8F23 /* EasyOpenGL_Error.cpp */; };
 		D58167DE1FD4444100439620 /* EasyOpenGL03.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D58167DD1FD4444100439620 /* EasyOpenGL03.cpp */; };
+		D5A6A5602026AE6C009998AD /* LampFragment12.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = D5A6A55F2026AE53009998AD /* LampFragment12.fs */; };
+		D5A6A5612026AE6C009998AD /* LampVertex12.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = D5A6A55D2026AE53009998AD /* LampVertex12.vs */; };
+		D5A6A5622026AE6C009998AD /* LightFragment12.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = D5A6A55E2026AE53009998AD /* LightFragment12.fs */; };
+		D5A6A5632026AE6C009998AD /* LightVertex12.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = D5A6A55C2026AE52009998AD /* LightVertex12.vs */; };
 		D5A70F681FE4AA45001C0E2F /* FragmentShader03.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = D5A70F661FE4AA2F001C0E2F /* FragmentShader03.fs */; };
 		D5A70F691FE4AA45001C0E2F /* VertexShader03.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = D5A70F671FE4AA2F001C0E2F /* VertexShader03.vs */; };
 		D5AD17C21FD41971009EEA08 /* EasyOpenGL_Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5AD17C11FD41970009EEA08 /* EasyOpenGL_Shader.cpp */; };
@@ -178,12 +182,16 @@
 		};
 		D54AFB5E202692A7009EA24B /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
+				D5A6A5602026AE6C009998AD /* LampFragment12.fs in CopyFiles */,
+				D5A6A5612026AE6C009998AD /* LampVertex12.vs in CopyFiles */,
+				D5A6A5622026AE6C009998AD /* LightFragment12.fs in CopyFiles */,
+				D5A6A5632026AE6C009998AD /* LightVertex12.vs in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D54EC0631BA871C400B49841 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -308,7 +316,7 @@
 		D51B11D0201B545B0057CD5C /* EasyOpenGL11 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EasyOpenGL11; sourceTree = BUILT_PRODUCTS_DIR; };
 		D51B11D2201B545B0057CD5C /* EasyOpenGL11.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EasyOpenGL11.cpp; sourceTree = "<group>"; };
 		D54AFB60202692A7009EA24B /* EasyOpenGL12 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EasyOpenGL12; sourceTree = BUILT_PRODUCTS_DIR; };
-		D54AFB62202692A7009EA24B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		D54AFB62202692A7009EA24B /* EasyOpenGL12.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EasyOpenGL12.cpp; sourceTree = "<group>"; };
 		D54C3A491FD2EB890026658F /* FragmentShader04.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = FragmentShader04.fs; sourceTree = "<group>"; };
 		D54C3A4A1FD2EB8A0026658F /* VertexShader04.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = VertexShader04.vs; sourceTree = "<group>"; };
 		D54EC04A1BA86E0E00B49841 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
@@ -344,6 +352,10 @@
 		D57FF8EC1FE60EF100DA8F23 /* EasyOpenGL_Error.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = EasyOpenGL_Error.cpp; path = Common/EasyOpenGL_Error.cpp; sourceTree = "<group>"; };
 		D58167DB1FD4444100439620 /* EasyOpenGL03 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EasyOpenGL03; sourceTree = BUILT_PRODUCTS_DIR; };
 		D58167DD1FD4444100439620 /* EasyOpenGL03.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EasyOpenGL03.cpp; sourceTree = "<group>"; };
+		D5A6A55C2026AE52009998AD /* LightVertex12.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = LightVertex12.vs; sourceTree = "<group>"; };
+		D5A6A55D2026AE53009998AD /* LampVertex12.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = LampVertex12.vs; sourceTree = "<group>"; };
+		D5A6A55E2026AE53009998AD /* LightFragment12.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = LightFragment12.fs; sourceTree = "<group>"; };
+		D5A6A55F2026AE53009998AD /* LampFragment12.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = LampFragment12.fs; sourceTree = "<group>"; };
 		D5A70F661FE4AA2F001C0E2F /* FragmentShader03.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = FragmentShader03.fs; sourceTree = "<group>"; };
 		D5A70F671FE4AA2F001C0E2F /* VertexShader03.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = VertexShader03.vs; sourceTree = "<group>"; };
 		D5AD17C11FD41970009EEA08 /* EasyOpenGL_Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EasyOpenGL_Shader.cpp; path = Common/EasyOpenGL_Shader.cpp; sourceTree = "<group>"; };
@@ -523,7 +535,11 @@
 		D54AFB61202692A7009EA24B /* EasyOpenGL12 */ = {
 			isa = PBXGroup;
 			children = (
-				D54AFB62202692A7009EA24B /* main.cpp */,
+				D54AFB62202692A7009EA24B /* EasyOpenGL12.cpp */,
+				D5A6A55C2026AE52009998AD /* LightVertex12.vs */,
+				D5A6A55E2026AE53009998AD /* LightFragment12.fs */,
+				D5A6A55D2026AE53009998AD /* LampVertex12.vs */,
+				D5A6A55F2026AE53009998AD /* LampFragment12.fs */,
 			);
 			path = EasyOpenGL12;
 			sourceTree = "<group>";
@@ -676,8 +692,8 @@
 				D5B231ED200F9DCF008333EE /* EasyOpenGL09 */,
 				D55095EF2010F42B00CA3A33 /* EasyOpenGL10 */,
 				D51B11D1201B545B0057CD5C /* EasyOpenGL11 */,
-				D54CFFF51C947BA6008796A3 /* Common */,
 				D54AFB61202692A7009EA24B /* EasyOpenGL12 */,
+				D54CFFF51C947BA6008796A3 /* Common */,
 				D57FF8E01FE5FB3F00DA8F23 /* ThirdPart */,
 				D57FF8E51FE6067200DA8F23 /* Images */,
 				D54EC0491BA86DD400B49841 /* Frameworks */,
@@ -1021,7 +1037,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D54AFB63202692A7009EA24B /* main.cpp in Sources */,
+				D54AFB63202692A7009EA24B /* EasyOpenGL12.cpp in Sources */,
 				D54AFB6C202692C5009EA24B /* EasyOpenGL.cpp in Sources */,
 				D54AFB6D202692C5009EA24B /* EasyOpenGL_Shader.cpp in Sources */,
 				D54AFB6E202692C5009EA24B /* EasyOpenGL_Error.cpp in Sources */,
