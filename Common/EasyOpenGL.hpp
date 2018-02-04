@@ -82,8 +82,35 @@ public:
     void processMouseMovement(float xoffset, float yoffset, bool constrainPitch = true);
     void processScroll(float yoffset);
 
+    void stepFrame(GLFWwindow *window);
+    void bindingWindow(GLFWwindow *window);
+
 private:
+    float mpLastTime;
+    float mpDeltaTime;
+
+    bool mpKeyPressingESC = false;
+    bool mpKeyPressingR   = false;
+
+    float mpLastX = 0;
+    float mpLastY = 0;
+    bool mpIsFirstMouse = true;
+
+    vec3 mpPositionInit;
+    vec3 mpFrontInit;
+    vec3 mpUpInit;
+    vec3 mpRightInit;
+    vec3 mpWorldUpInit;
+
+    float mpYawInit;
+    float mpPitchInit;
+
+    float mpMovementSpeedInit;
+    float mpMouseSensitivityInit;
+    float mpZoomInit;
+
     void updateCameraVectors();
+    void resetCamera();
 };
 
 #endif /* EasyOpenGL_hpp */

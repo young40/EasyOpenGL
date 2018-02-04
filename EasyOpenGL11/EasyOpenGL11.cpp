@@ -12,21 +12,12 @@
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
 
-void processInput   (GLFWwindow *window);
-void mouse_callback (GLFWwindow *window, double xpos, double ypos);
-void scroll_callback(GLFWwindow *window, double xpos, double ypos);
-
-vec3 cameraPos   = vec3(0.0f, 0.0f,  3.0f);
-vec3 cameraFront = vec3(0.0f, 0.0f, -1.0f);
-vec3 cameraUp    = vec3(0.0f, 1.0f,  0.0f);
-
-EO_Camera camera(cameraPos, cameraUp);
-
-float deltaTime =  0.0f;
-float lastTime  =  0.0f;
-
 int main(int argc, const char * argv[]) {
-    GLFWwindow *window = EO_CreateWindow(960, 640, "EasyOpenGL 10 -- 摄像机");
+    GLFWwindow *window = EO_CreateWindow(960, 640, "EasyOpenGL 11 -- 摄像机 EO_Camera 类");
+
+    vec3 cameraPos = vec3(0.0f, 0.0f,  3.0f);
+    vec3 cameraUp  = vec3(0.0f, 1.0f,  0.0f);
+    EO_Camera camera(cameraPos, cameraUp);
 
     GLuint vertexShaderID = EO_LoadShaderFromFile("VertexShader10.vs", GL_VERTEX_SHADER);
     GLuint fragmentShaderID = EO_LoadShaderFromFile("FragmentShader10.fs", GL_FRAGMENT_SHADER);
@@ -121,16 +112,10 @@ int main(int argc, const char * argv[]) {
         glm::vec3(-1.3f,  1.0f, -1.5f)
     };
 
-    glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
-    glfwSetCursorPosCallback(window, mouse_callback);
-    glfwSetScrollCallback(window, scroll_callback);
+    camera.bindingWindow(window);
 
     while (not glfwWindowShouldClose(window)) {
-        float currentFrame = glfwGetTime();
-        deltaTime = currentFrame - lastTime;
-        lastTime = currentFrame;
-
-        processInput(window);
+        camera.stepFrame(window);
 
         glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -166,76 +151,4 @@ int main(int argc, const char * argv[]) {
     glfwTerminate();
 
     return 0;
-}
-
-bool keyPressingR = false;
-
-void processInput(GLFWwindow *window)
-{
-    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
-    {
-        glfwSetWindowShouldClose(window, true);
-    }
-
-    if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
-    {
-        camera.processKeyboard(Movement::kForward, deltaTime);
-    }
-
-    if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
-    {
-        camera.processKeyboard(Movement::kBackward, deltaTime);
-    }
-
-    if (glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS)
-    {
-        keyPressingR = true;
-    }
-    if (keyPressingR && glfwGetKey(window, GLFW_KEY_R) == GLFW_RELEASE)
-    {
-        cameraPos    = vec3(0.0f, 0.0f, 3.0f);
-        cameraFront  = vec3(0.0f, 0.0f, -1.0f);
-        keyPressingR = false;
-        camera.mPosition = cameraPos;
-        camera.mFront    = cameraFront;
-    }
-
-    if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
-    {
-        camera.processKeyboard(Movement::kLeft, deltaTime);
-    }
-
-    if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
-    {
-        camera.processKeyboard(Movement::kRight, deltaTime);
-    }
-}
-
-double lastX = 960.0/2.0;
-double lastY = 640.0/2.0;
-
-bool isFirstMouse = true;
-
-float gyaw = -90.0;
-float gpitch = 0;
-
-void mouse_callback(GLFWwindow *window, double xpos, double ypos)
-{
-    if(isFirstMouse)
-    {
-        lastX = xpos;
-        lastY = ypos;
-        isFirstMouse = false;
-    }
-    float xoffset = xpos - lastX;
-    float yoffset = ypos - lastY;
-    lastX = xpos;
-    lastY = ypos;
-
-    camera.processMouseMovement(xoffset, yoffset);
-}
-
-void scroll_callback(GLFWwindow *window, double xoffset, double yoffset)
-{
-    camera.processScroll(yoffset);
 }

@@ -18,6 +18,13 @@ mZoom(45.0f)
     mWorldUp  = up;
     mYaw      = yaw;
     mPitch    = pitch;
+
+    mpPositionInit = mPosition;
+    mpWorldUpInit  = mWorldUp;
+    mpYawInit      = mYaw;
+    mpPitchInit    = mPitch;
+    mpZoomInit     = mZoom;
+
     updateCameraVectors();
 }
 
@@ -94,4 +101,92 @@ void EO_Camera::updateCameraVectors()
 
     mRight = normalize(cross(mFront, mWorldUp));
     mUp    = normalize(cross(mRight, mFront));
+}
+
+void EO_Camera::stepFrame(GLFWwindow *window)
+{
+    float currentTime = glfwGetTime();
+    mpDeltaTime = currentTime - mpLastTime;
+    mpLastTime = currentTime;
+
+    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+    {
+        mpKeyPressingESC = true;
+    }
+    if (mpKeyPressingESC && glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_RELEASE)
+    {
+        mpKeyPressingESC = false;
+        glfwSetWindowShouldClose(window, true);
+    }
+
+    if (glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS)
+    {
+        mpKeyPressingR = true;
+    }
+    if (mpKeyPressingR && glfwGetKey(window, GLFW_KEY_R) == GLFW_RELEASE)
+    {
+        mpKeyPressingR = false;
+
+        resetCamera();
+    }
+
+    if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
+    {
+        processKeyboard(Movement::kForward, mpDeltaTime);
+    }
+
+    if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
+    {
+        processKeyboard(Movement::kBackward, mpDeltaTime);
+    }
+
+    if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
+    {
+        processKeyboard(Movement::kLeft, mpDeltaTime);
+    }
+
+    if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
+    {
+        processKeyboard(Movement::kRight, mpDeltaTime);
+    }
+}
+
+void EO_Camera::bindingWindow(GLFWwindow *window)
+{
+    glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+    glfwSetWindowUserPointer(window, this);
+
+    glfwSetCursorPosCallback(window, +[](GLFWwindow *window, double xpos, double ypos)
+    {
+        EO_Camera *camera = static_cast<EO_Camera*>(glfwGetWindowUserPointer(window));
+        if (camera->mpIsFirstMouse)
+        {
+            camera->mpLastX = xpos;
+            camera->mpLastY = ypos;
+            camera->mpIsFirstMouse = false;
+        }
+
+        float xoffset = xpos - camera->mpLastX;
+        float yoffset = ypos - camera->mpLastY;
+        camera->mpLastX = xpos;
+        camera->mpLastY = ypos;
+
+        camera->processMouseMovement(xoffset, yoffset);
+    });
+
+    glfwSetScrollCallback(window, +[](GLFWwindow *window, double xoffset, double yoffset)
+    {
+        static_cast<EO_Camera*>(glfwGetWindowUserPointer(window))->processScroll(yoffset);
+    });
+}
+
+void EO_Camera::resetCamera()
+{
+    mPosition = mpPositionInit;
+    mWorldUp  = mpWorldUpInit;
+    mYaw      = mpYawInit;
+    mPitch    = mpPitchInit;
+    mZoom     = mpZoomInit;
+
+    updateCameraVectors();
 }
